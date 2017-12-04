@@ -23,6 +23,11 @@ namespace WeatherApi.Controllers
             return Json(ObjectSuccess(Cities.ToArray()), AllowGet);
         }
 
+        public JsonResult GetMonthList()
+        {
+            return Json(ObjectSuccess(Months.ToArray()), AllowGet);
+        }
+
         public JsonResult GetLangList()
         {
             return Json(ObjectSuccess(Global.LanguageResponse.languages), AllowGet);
@@ -38,13 +43,14 @@ namespace WeatherApi.Controllers
             try
             {
                 string url = $"http://api.wunderground.com/api/{WeatherApiKey}/forecast10day/lang:{lang}/q/zmw:{key}.json";
-                string path = $"forecast10day_lang_{lang}_q_zmw_{key}.json";
-                var tenDaysForecast = GetResponse<CityTenDaysForecast>(url, path);
+                string cacheName = $"forecast10day_lang_{lang}_q_zmw_{key}";
+                var tenDaysForecast = GetResponse<CityTenDaysForecast>(url, cacheName + ".json");
+                var cacheModel = CacheList.FirstOrDefault(x => x.Name.Equals(cacheName));
 
                 if (tenDaysForecast.response.error != null && tenDaysForecast.response.error.type == "querynotfound")
                     return Json(ObjectError($"No Records Found!\n{tenDaysForecast.response.error.description}"), AllowGet);
 
-                return Json(ObjectSuccess(tenDaysForecast.forecast), AllowGet);
+                return Json(ObjectSuccess(tenDaysForecast.forecast, "", cacheModel), AllowGet);
             }
             catch (Exception e)
             {
@@ -59,20 +65,23 @@ namespace WeatherApi.Controllers
             {
                 //var dateRange = "12011231";
                 var cityPlannerList = new List<CityPlanner>();
+                var cacheModelList = new List<CacheModel>();
                 foreach (var dateRange in DateRanges)
                 {
                     string url = $"http://api.wunderground.com/api/{WeatherApiKey}/planner_{dateRange}/q/{countryCode}/{cityName}.json";
-                    string path = $"planner_{dateRange}_q_{countryCode}_{cityName}.json"; 
-                    var cityPlanner = GetResponse<CityPlanner>(url,path);
+                    string cacheName = $"planner_{dateRange}_q_{countryCode}_{cityName.Replace(' ', '_')}";
+                    var cityPlanner = GetResponse<CityPlanner>(url, cacheName + ".json");
+                    var cacheModel = CacheList.FirstOrDefault(x => x.Name.Equals(cacheName));
+                    cacheModelList.Add(cacheModel);
                     cityPlanner.SetColorRangeClass();
                     if (cityPlanner.response.error == null)
                         cityPlannerList.Add(cityPlanner);
                 }
- 
+
                 if (cityPlannerList.Count <= 0)
                     return Json(ObjectError($"No Records Found!"), AllowGet);
 
-                return Json(ObjectSuccess(cityPlannerList), AllowGet);
+                return Json(ObjectSuccess(cityPlannerList, "", cacheModelList), AllowGet);
             }
             catch (Exception e)
             {

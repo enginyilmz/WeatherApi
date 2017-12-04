@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Net;
@@ -13,13 +14,14 @@ namespace WeatherApi
 {
     public static class Helper
     {
-        public static object ObjectSuccess(dynamic data, string message = "")
+        public static object ObjectSuccess(dynamic data, string message = "", object cacheModel = null)
         {
             return new
             {
                 IsSuccess = true,
                 Message = message,
-                Data = data
+                Data = data,
+                Cache = cacheModel
             };
         }
 
@@ -38,7 +40,9 @@ namespace WeatherApi
             //var path = HostingEnvironment.ApplicationPhysicalPath + "Caches\\" + cacheName;
             var path = HostingEnvironment.MapPath($"~/Caches/{cacheName}");
             if (File.Exists(path))
-                targetObj = GetFileToJsonObj<T>(path);              
+            {
+                targetObj = GetFileToJsonObj<T>(path);
+            }
             else
             {
                 CheckQueueTime();
@@ -59,6 +63,14 @@ namespace WeatherApi
                         streamWriter.Close();
                     }
                 }
+
+                var cacheModel = new CacheModel()
+                {
+                    Name = Path.GetFileNameWithoutExtension(path),
+                    CreateDate = System.IO.File.GetLastWriteTime(path),
+                    FullPath = path
+                };
+                CacheList.Add(cacheModel);
             }
             return targetObj;
         }

@@ -18,7 +18,7 @@ namespace WeatherApi.Controllers
 
         public JsonResult List()
         {
-            return Json(ObjectSuccess(Cities),AllowGet);
+            return Json(ObjectSuccess(Cities, null),AllowGet);
         }
 
         public JsonResult Add(string cityName, string cityKey, string countryCode)
@@ -33,7 +33,7 @@ namespace WeatherApi.Controllers
                 CountryCode = countryCode
             };
             Cities.Add(city);
-            return Json(ObjectSuccess(city, "The new city has been successfully added."), AllowGet);
+            return Json(ObjectSuccess(city, "The new city has been successfully added.", null), AllowGet);
         }
 
         public JsonResult Delete(Guid? Id)
@@ -48,7 +48,7 @@ namespace WeatherApi.Controllers
                 return Json(ObjectError("No Records Found!"), AllowGet);
             }
 
-            return Json(ObjectSuccess(city, "City is deleted."), AllowGet);
+            return Json(ObjectSuccess(city, "City is deleted.", null), AllowGet);
         }
 
         public JsonResult Edit(City data)
@@ -71,13 +71,13 @@ namespace WeatherApi.Controllers
                 return Json(ObjectError("No Records Found!"), AllowGet);
             }
 
-            return Json(ObjectSuccess(updateCity, "City is updated."), AllowGet);
+            return Json(ObjectSuccess(updateCity, "City is updated.", null), AllowGet);
         }
 
         public JsonResult Search(City city)
         {
             Session["srcValue"] = city;
-            return Json(ObjectSuccess(null), AllowGet);
+            return Json(ObjectSuccess(null, null), AllowGet);
         }
 
     }

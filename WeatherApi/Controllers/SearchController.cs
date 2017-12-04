@@ -25,12 +25,12 @@ namespace WeatherApi.Controllers
         public JsonResult List()
         {
             var city = Session["srcValue"] as City;
-            return city == null ? Json(ObjectSuccess(null), AllowGet) : Search(city.Name, city.CountryCode);
+            return city == null ? Json(ObjectSuccess(null, null), AllowGet) : Search(city.Name, city.CountryCode);
         }
 
         public JsonResult GetLangList()
         {
-            return Json(ObjectSuccess(Global.LanguageResponse.languages), AllowGet);
+            return Json(ObjectSuccess(Global.LanguageResponse.languages, null), AllowGet);
         }
 
         public JsonResult Search(string name, string culture = "TR")
@@ -46,7 +46,7 @@ namespace WeatherApi.Controllers
                     res.url = $"https://www.google.com/maps/embed/v1/place?q={res.lat}%2C{res.lon}&key={GoogleMapApiKey}";
                 }
 
-                return Json(cityResponse.RESULTS.Count == 0 ? ObjectError("No Records Found!") : ObjectSuccess(cityResponse.RESULTS), AllowGet);
+                return Json(cityResponse.RESULTS.Count == 0 ? ObjectError("No Records Found!") : ObjectSuccess(cityResponse.RESULTS, null), AllowGet);
             }
             catch (Exception e)
             {
@@ -67,13 +67,13 @@ namespace WeatherApi.Controllers
                     CountryCode = city.c
                 };
                 Cities.Add(newCity);
-                return Json(ObjectSuccess(newCity, "The new city has been successfully added."), AllowGet);
+                return Json(ObjectSuccess(newCity, "The new city has been successfully added.", null), AllowGet);
             }
             else
             {
                 check.Key = city.zmw;
                 check.CountryCode = city.c;
-                return Json(ObjectSuccess(check, "City is updated."), AllowGet);
+                return Json(ObjectSuccess(check, "City is updated.", null), AllowGet);
             }
         }
     }
