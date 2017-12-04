@@ -1,0 +1,223 @@
+{
+  "response": {
+    "version": "0.1",
+    "termsofService": "http://www.wunderground.com/weather/api/d/terms.html",
+    "features": {
+      "planner": 1
+    }
+  },
+  "trip": {
+    "title": "Historical Summary for February 01 - February 28",
+    "airport_code": "LTBX",
+    "error": "",
+    "period_of_record": {
+      "date_start": {
+        "date": {
+          "epoch": "",
+          "pretty": "",
+          "day": null,
+          "month": null,
+          "year": null,
+          "yday": null,
+          "hour": null,
+          "min": null,
+          "sec": null,
+          "isdst": "",
+          "monthname": "",
+          "monthname_short": "",
+          "weekday_short": "",
+          "weekday": "",
+          "ampm": "",
+          "tz_short": "",
+          "tz_long": ""
+        }
+      },
+      "date_end": {
+        "date": {
+          "epoch": "",
+          "pretty": "",
+          "day": null,
+          "month": null,
+          "year": null,
+          "yday": null,
+          "hour": null,
+          "min": null,
+          "sec": null,
+          "isdst": "",
+          "monthname": "",
+          "monthname_short": "",
+          "weekday_short": "",
+          "weekday": "",
+          "ampm": "",
+          "tz_short": "",
+          "tz_long": ""
+        }
+      }
+    },
+    "temp_high": {
+      "min": {
+        "F": "33",
+        "C": "1"
+      },
+      "avg": {
+        "F": "50",
+        "C": "10"
+      },
+      "max": {
+        "F": "60",
+        "C": "16"
+      }
+    },
+    "temp_low": {
+      "min": {
+        "F": "33",
+        "C": "1"
+      },
+      "avg": {
+        "F": "50",
+        "C": "10"
+      },
+      "max": {
+        "F": "60",
+        "C": "16"
+      }
+    },
+    "precip": {
+      "min": {
+        "in": "0.00",
+        "cm": "0.0"
+      },
+      "avg": {
+        "in": "0.00",
+        "cm": "0.0"
+      },
+      "max": {
+        "in": "0.00",
+        "cm": "0.0"
+      }
+    },
+    "dewpoint_high": {
+      "min": {
+        "F": "34",
+        "C": "1"
+      },
+      "avg": {
+        "F": "40",
+        "C": "5"
+      },
+      "max": {
+        "F": "48",
+        "C": "9"
+      }
+    },
+    "dewpoint_low": {
+      "min": {
+        "F": "34",
+        "C": "1"
+      },
+      "avg": {
+        "F": "40",
+        "C": "5"
+      },
+      "max": {
+        "F": "48",
+        "C": "9"
+      }
+    },
+    "cloud_cover": {
+      "cond": "partly cloudy"
+    },
+    "chance_of": {
+      "tempoverfreezing": {
+        "name": "Cool",
+        "description": "temperature between 32&deg;F / 0&deg;C and 60&deg;F / 16&deg; C",
+        "percentage": "67"
+      },
+      "tempoversixty": {
+        "name": "Warm",
+        "description": "temperature over 60&deg;F / 16&deg;C and below 90&deg;F / 32&deg;C",
+        "percentage": "33"
+      },
+      "chanceoffogday": {
+        "name": "Fog",
+        "description": "",
+        "percentage": "33"
+      },
+      "chanceofsunnycloudyday": {
+        "name": "Sunny",
+        "description": "",
+        "percentage": "50"
+      },
+      "chanceofcloudyday": {
+        "name": "Cloudy",
+        "description": "",
+        "percentage": "50"
+      },
+      "chanceofsnowonground": {
+        "name": "Ground Snow",
+        "description": "",
+        "percentage": "0"
+      },
+      "chanceoftornadoday": {
+        "name": "Tornado",
+        "description": "",
+        "percentage": "0"
+      },
+      "chanceofwindyday": {
+        "name": "Windy",
+        "description": "average wind over 10 mph / 15km/h",
+        "percentage": "0"
+      },
+      "chanceofprecip": {
+        "name": "Precipitation",
+        "description": "",
+        "percentage": "0"
+      },
+      "chanceofsultryday": {
+        "name": "Sweltering",
+        "description": "dew point over 70&deg;F / 21&deg;C",
+        "percentage": "0"
+      },
+      "chanceofhumidday": {
+        "name": "Humid",
+        "description": "dew point over 60&deg;F / 16&deg;C",
+        "percentage": "0"
+      },
+      "tempbelowfreezing": {
+        "name": "Freezing",
+        "description": "temperature below 32&deg;F / 0&deg;C",
+        "percentage": "0"
+      },
+      "tempoverninety": {
+        "name": "Hot",
+        "description": "temperature over 90&deg;F / 32&deg;C",
+        "percentage": "0"
+      },
+      "chanceofthunderday": {
+        "name": "Thunderstorms",
+        "description": "",
+        "percentage": "0"
+      },
+      "chanceofhailday": {
+        "name": "Hail",
+        "description": "",
+        "percentage": "0"
+      },
+      "chanceofsnowday": {
+        "name": "Snow",
+        "description": "",
+        "percentage": "0"
+      },
+      "chanceofrainday": {
+        "name": "Rain",
+        "description": "",
+        "percentage": "0"
+      },
+      "chanceofpartlycloudyday": {
+        "name": "Partly Cloudy",
+        "description": "",
+        "percentage": "0"
+      }
+    }
+  }
+}

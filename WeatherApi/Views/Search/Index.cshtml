@@ -1,0 +1,158 @@
+﻿
+@{
+    ViewBag.Title = "Search";
+    var sessionObj = Request.RequestContext.HttpContext.Session["srcValue"] as WeatherApi.Models.City;
+    var searchValue = string.Empty;
+    var searchCountrCode = "";
+    if (sessionObj != null)
+    {
+        searchValue = sessionObj.Name;
+        searchCountrCode = sessionObj.CountryCode;
+    }
+}
+
+<h2>Search</h2>
+<div class="container">
+    <div class="row">
+        <div ng-init="init()" ng-controller="srcCtrl" class="col-md-12">
+            <div uib-alert ng-repeat="alert in Alerts" ng-class="'alert-' + alert.type" close="closeAlert($index)" dismiss-on-timeout="5000">{{alert.msg}}</div>
+            <div class="col-md-2">
+                <input class="form-control" type="text" ng-model="CountryValue" placeholder="Country Code as 'TR'" required>
+            </div>
+            <div class="col-md-2">
+                <input class="form-control" type="text" ng-model="SearchValue" placeholder="Search for" required ng-keyup="$event.keyCode == 13 ? Search() : null">
+            </div>
+            <div class="display-inline">
+                <button type="button" ng-click="Search()" class="btn btn-default">
+                    <span class="glyphicon glyphicon-search"> Search</span>
+                </button>
+            </div>
+            <div class="display-inline">
+                <a class="btn btn-info" href="https://www.wunderground.com/weather/api/d/docs?d=resources/country-to-iso-matching&MR=1" target="_blank">
+                    Country ISO Code >>
+                </a>
+            </div>
+            <div ng-show="loading" class="display-inline">
+                <img class="loading" src="http://www.nasa.gov/multimedia/videogallery/ajax-loader.gif">
+                <label class="control-label"> LOADING...</label>
+            </div>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th><i>Map</i></th>
+                            <th><i>Detail</i></th>
+                            <th><i>Action</i></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="city in List">
+                            <td>
+                                <iframe width="600" height="450" frameborder="0" style="border: 0" ng-src="{{trustSrc(city.url)}}" allowfullscreen></iframe>
+                            </td>
+                            <td>
+                                <table>
+                                    <tr><td> <span class="label label-default">name</span></td><td>: {{city.name}}</td></tr>
+                                    <tr><td> <span class="label label-default">type</span></td><td>: {{city.type}}</td></tr>
+                                    <tr><td> <span class="label label-default">c</span></td><td>: {{city.c}}</td></tr>
+                                    <tr><td> <span class="label label-default">zmw</span></td><td>: {{city.zmw}}</td></tr>
+                                    <tr><td> <span class="label label-default">tz</span></td><td>: {{city.tz}}</td></tr>
+                                    <tr><td> <span class="label label-default">tzs</span></td><td>: {{city.tzs}}</td></tr>
+                                    <tr><td> <span class="label label-default">l</span></td><td>: {{city.l}}</td></tr>
+                                    <tr><td> <span class="label label-default">ll</span></td><td>: {{city.ll}}</td></tr>
+                                    <tr><td> <span class="label label-default">lat</span></td><td>: {{city.lat}}</td></tr>
+                                    <tr><td> <span class="label label-default">lon</span></td><td>: {{city.lon}}</td></tr>
+                                </table>
+                            </td>
+                            <td>
+                                <span style="cursor: pointer;" ng-click="Edit(city)"><i class="glyphicon glyphicon glyphicon-edit" style="font-size: 24px;"></i></span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+    </div>
+</div>
+
+<script>
+
+    var pageList = {
+        list: "@Url.Action("List", "Search")",
+        search: "@Url.Action("Search", "Search")",
+        edit: "@Url.Action("Edit", "Search")",
+        langList: "@Url.Action("GetLangList", "Search")"
+    }
+
+    var myModule = angular.module('WeatherApp');
+   
+    myModule.controller("srcCtrl",
+        function ($scope, $http, $sce) {
+            $scope.List = [];
+            $scope.SearchValue = '@searchValue';
+            $scope.CountryValue = '@searchCountrCode';
+
+            $scope.trustSrc = function (src) {
+                return $sce.trustAsResourceUrl(src);
+            }
+
+            //Search
+            $scope.Search = function () {
+                if ($scope.SearchValue !== "") {
+                    $scope.loading = true;
+                    $http.post(pageList.search,
+                    {
+                        name: $scope.SearchValue,
+                        culture: $scope.CountryValue
+                    }).then(function (res) {
+                        var jsonResult = res.data;
+                        if (jsonResult.IsSuccess) {
+                            $scope.List = [];
+                            $scope.List.push(...jsonResult.Data);
+                        } else {
+                            $scope.addAlert('danger', jsonResult.Message);
+                        }
+                        $scope.loading = false;
+                    });
+                }
+            }
+
+            //Edit
+            $scope.Edit = function (city) {
+                $http.post(pageList.edit, {
+                    city: city
+                }).then(function (res) {
+                    var jsonResult = res.data;
+                    if (jsonResult.IsSuccess) {
+                        $scope.addAlert('info', city.name + ' ' + jsonResult.Message);
+                    } else {
+                        $scope.addAlert('danger', jsonResult.Message);
+                    }
+                });
+            };
+
+            //Init
+            $scope.init = function () {
+                $http.get(pageList.list, {})
+                    .then(function (res) {
+                        var jsonResult = res.data;
+                        if (jsonResult.IsSuccess) {
+                            $scope.List = [];
+                            $scope.List.push(...jsonResult.Data);
+                        } else {
+                            $scope.addAlert('danger', jsonResult.Message);
+                        }
+                    });
+            }
+
+            //Alert
+            $scope.Alerts = [];
+
+            $scope.addAlert = function (type, msg) {
+                $scope.Alerts.push({ type: type, msg: msg });
+            };
+
+            $scope.closeAlert = function (index) {
+                $scope.Alerts.splice(index, 1);
+            };
+        }
+    );
+</script>

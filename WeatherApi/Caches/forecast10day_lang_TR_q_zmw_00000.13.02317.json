@@ -1,0 +1,940 @@
+{
+  "response": {
+    "version": "0.1",
+    "termsofService": "http://www.wunderground.com/weather/api/d/terms.html",
+    "features": {
+      "forecast10day": 1
+    }
+  },
+  "forecast": {
+    "txt_forecast": {
+      "date": "14:13 CET",
+      "forecastday": [
+        {
+          "period": 0,
+          "icon": "cloudy",
+          "icon_url": "http://icons.wxug.com/i/c/k/cloudy.gif",
+          "title": "Perşembe",
+          "fcttext": "Bulutlu. Soğuk. En yüksek 22°F. Rüzgâr K ve değişken.",
+          "fcttext_metric": "Bulutlu. Soğuk. En yüksek -6°C. Rüzgâr K ve değişken.",
+          "pop": "0"
+        },
+        {
+          "period": 1,
+          "icon": "nt_cloudy",
+          "icon_url": "http://icons.wxug.com/i/c/k/nt_cloudy.gif",
+          "title": "Perşembe Gecesi",
+          "fcttext": "Bulutlu. En düşük 16°F. Rüzgâr K, 5 - 10 mil/saat.",
+          "fcttext_metric": "Bulutlu. En düşük -9°C. Rüzgâr K ve değişken.",
+          "pop": "20"
+        },
+        {
+          "period": 2,
+          "icon": "partlycloudy",
+          "icon_url": "http://icons.wxug.com/i/c/k/partlycloudy.gif",
+          "title": "Cuma",
+          "fcttext": "Parçalı Bulutlu. Soğuk devam ediyor. En yüksek 17°F. Rüzgâr KB ve değişken.",
+          "fcttext_metric": "Parçalı Bulutlu. Soğuk devam ediyor. En yüksek -8°C. Rüzgâr KB ve değişken.",
+          "pop": "10"
+        },
+        {
+          "period": 3,
+          "icon": "nt_chancesnow",
+          "icon_url": "http://icons.wxug.com/i/c/k/nt_chancesnow.gif",
+          "title": "Cuma Gecesi",
+          "fcttext": "Erken saatlerde kar sağanakları. En düşük 14°F. Rüzgâr BGB, 5 - 10 mil/saat. Kar ihtimali %60. 1 inç'den az kar birikimi.",
+          "fcttext_metric": "Erken saatlerde kar sağanakları. En düşük -10°C. Rüzgâr BGB, 10 - 15 km/saat. Kar ihtimali %60. 2 cm'den az kar birikimi.",
+          "pop": "60"
+        },
+        {
+          "period": 4,
+          "icon": "sleet",
+          "icon_url": "http://icons.wxug.com/i/c/k/sleet.gif",
+          "title": "Cumartesi",
+          "fcttext": "Sabah saatlerinde yağışla birlikte buzlanma. En yüksek 30°F. Rüzgâr GB, 5 - 10 mil/saat. Yağış ihtimali %60.",
+          "fcttext_metric": "Sabah saatlerinde yağışla birlikte buzlanma. En yüksek -1°C. Rüzgâr GB, 10 - 15 km/saat. Yağış ihtimali %60.",
+          "pop": "60"
+        },
+        {
+          "period": 5,
+          "icon": "nt_partlycloudy",
+          "icon_url": "http://icons.wxug.com/i/c/k/nt_partlycloudy.gif",
+          "title": "Cumartesi Gecesi",
+          "fcttext": "Parçalı Bulutlu. Sert don bekleniyor. En düşük 21°F. Rüzgâr BGB, 5 - 10 mil/saat.",
+          "fcttext_metric": "Parçalı Bulutlu. Sert don bekleniyor. En düşük -6°C. Rüzgâr BGB, 10 - 15 km/saat.",
+          "pop": "10"
+        },
+        {
+          "period": 6,
+          "icon": "clear",
+          "icon_url": "http://icons.wxug.com/i/c/k/clear.gif",
+          "title": "Pazar",
+          "fcttext": "Genel Olarak Açık. En yüksek 25°F. Rüzgâr BGB, 10 - 15 mil/saat.",
+          "fcttext_metric": "Genel Olarak Açık. En yüksek -4°C. Rüzgâr BGB, 10 - 15 km/saat.",
+          "pop": "10"
+        },
+        {
+          "period": 7,
+          "icon": "nt_mostlycloudy",
+          "icon_url": "http://icons.wxug.com/i/c/k/nt_mostlycloudy.gif",
+          "title": "Pazar Gecesi",
+          "fcttext": "Çok bulutlu. En düşük 22°F. Rüzgâr BKB, 10 - 15 mil/saat.",
+          "fcttext_metric": "Çok bulutlu. En düşük -6°C. Rüzgâr BKB, 15 - 25 km/saat.",
+          "pop": "10"
+        },
+        {
+          "period": 8,
+          "icon": "partlycloudy",
+          "icon_url": "http://icons.wxug.com/i/c/k/partlycloudy.gif",
+          "title": "Pazartesi",
+          "fcttext": "Parçalı Bulutlu. En yüksek 24°F. Rüzgâr BKB, 10 - 15 mil/saat.",
+          "fcttext_metric": "Parçalı Bulutlu. En yüksek -5°C. Rüzgâr BKB, 10 - 15 km/saat.",
+          "pop": "20"
+        },
+        {
+          "period": 9,
+          "icon": "nt_partlycloudy",
+          "icon_url": "http://icons.wxug.com/i/c/k/nt_partlycloudy.gif",
+          "title": "Pazartesi Gecesi",
+          "fcttext": "Parçalı Bulutlu. En düşük 16°F. Rüzgâr B, 5 - 10 mil/saat.",
+          "fcttext_metric": "Parçalı Bulutlu. En düşük -9°C. Rüzgâr B, 10 - 15 km/saat.",
+          "pop": "20"
+        },
+        {
+          "period": 10,
+          "icon": "snow",
+          "icon_url": "http://icons.wxug.com/i/c/k/snow.gif",
+          "title": "Salı",
+          "fcttext": "Sabah saatlerinde kar sağanakları. En yüksek 25°F. Rüzgâr BGB, 10 - 15 mil/saat. Kar ihtimali %40.",
+          "fcttext_metric": "Sabah saatlerinde kar sağanakları. En yüksek -4°C. Rüzgâr BGB, 15 - 25 km/saat. Kar ihtimali %40.",
+          "pop": "40"
+        },
+        {
+          "period": 11,
+          "icon": "nt_partlycloudy",
+          "icon_url": "http://icons.wxug.com/i/c/k/nt_partlycloudy.gif",
+          "title": "Salı Gecesi",
+          "fcttext": "Parçalı Bulutlu. En düşük 18°F. Rüzgâr BKB, 10 - 15 mil/saat.",
+          "fcttext_metric": "Parçalı Bulutlu. En düşük -8°C. Rüzgâr BKB, 15 - 25 km/saat.",
+          "pop": "20"
+        },
+        {
+          "period": 12,
+          "icon": "partlycloudy",
+          "icon_url": "http://icons.wxug.com/i/c/k/partlycloudy.gif",
+          "title": "Çarşamba",
+          "fcttext": "Parçalı Bulutlu. En yüksek 21°F. Rüzgâr B, 5 - 10 mil/saat.",
+          "fcttext_metric": "Parçalı Bulutlu. En yüksek -6°C. Rüzgâr B, 10 - 15 km/saat.",
+          "pop": "20"
+        },
+        {
+          "period": 13,
+          "icon": "nt_partlycloudy",
+          "icon_url": "http://icons.wxug.com/i/c/k/nt_partlycloudy.gif",
+          "title": "Çarşamba Gecesi",
+          "fcttext": "Parçalı Bulutlu. En düşük 14°F. Rüzgâr BKB, 5 - 10 mil/saat.",
+          "fcttext_metric": "Parçalı Bulutlu. En düşük -10°C. Rüzgâr BKB, 10 - 15 km/saat.",
+          "pop": "20"
+        },
+        {
+          "period": 14,
+          "icon": "snow",
+          "icon_url": "http://icons.wxug.com/i/c/k/snow.gif",
+          "title": "Perşembe",
+          "fcttext": "Öğleden sonra gelişen kar sağanakları. En yüksek 19°F. Rüzgâr BKB, 5 - 10 mil/saat. Kar ihtimali %40. 1 inç'den az kar birikimi.",
+          "fcttext_metric": "Öğleden sonra gelişen kar sağanakları. En yüksek -7°C. Rüzgâr BKB, 10 - 15 km/saat. Kar ihtimali %40. 2 cm'den az kar birikimi.",
+          "pop": "40"
+        },
+        {
+          "period": 15,
+          "icon": "nt_snow",
+          "icon_url": "http://icons.wxug.com/i/c/k/nt_snow.gif",
+          "title": "Perşembe Gecesi",
+          "fcttext": "Kar. En düşük 17°F. Rüzgâr KKB, 5 - 10 mil/saat. Kar ihtimali %60. 3-5 inç kar yağışı.",
+          "fcttext_metric": "Kar. En düşük -8°C. Rüzgâr KKB, 10 - 15 km/saat. Kar ihtimali %60. 7-12 cm kar yağışı.",
+          "pop": "60"
+        },
+        {
+          "period": 16,
+          "icon": "snow",
+          "icon_url": "http://icons.wxug.com/i/c/k/snow.gif",
+          "title": "Cuma",
+          "fcttext": "Kar. En yüksek 21°F. Rüzgâr KKB, 5 - 10 mil/saat. Kar ihtimali %60. 3-5 inç kar yağışı.",
+          "fcttext_metric": "Kar. En yüksek -6°C. Rüzgâr KKB, 10 - 15 km/saat. Kar ihtimali %60. 7-12 cm kar yağışı.",
+          "pop": "60"
+        },
+        {
+          "period": 17,
+          "icon": "nt_snow",
+          "icon_url": "http://icons.wxug.com/i/c/k/nt_snow.gif",
+          "title": "Cuma Gecesi",
+          "fcttext": "Kar sağanağı. En düşük 16°F. Rüzgâr KKB, 5 - 10 mil/saat. Kar ihtimali %50. 1 inç kar yağışı.",
+          "fcttext_metric": "Kar sağanağı. En düşük -9°C. Rüzgâr KKB, 10 - 15 km/saat. Kar ihtimali %50. 2-3 cm kar yağışı.",
+          "pop": "50"
+        },
+        {
+          "period": 18,
+          "icon": "snow",
+          "icon_url": "http://icons.wxug.com/i/c/k/snow.gif",
+          "title": "Cumartesi",
+          "fcttext": "Kar sağanağı. En yüksek 18°F. Rüzgâr KKB, 5 - 10 mil/saat. Kar ihtimali %60. 1-3 inç kar yağışı.",
+          "fcttext_metric": "Kar sağanağı. En yüksek -8°C. Rüzgâr KKB, 10 - 15 km/saat. Kar ihtimali %60. 3-7 cm kar yağışı.",
+          "pop": "60"
+        },
+        {
+          "period": 19,
+          "icon": "nt_chancesnow",
+          "icon_url": "http://icons.wxug.com/i/c/k/nt_chancesnow.gif",
+          "title": "Cumartesi Gecesi",
+          "fcttext": "Erken saatlerde kar sağanakları. En düşük 12°F. Rüzgâr KKB, 5 - 10 mil/saat. Kar ihtimali %50. 1 inç'den az kar birikimi.",
+          "fcttext_metric": "Erken saatlerde kar sağanakları. En düşük -11°C. Rüzgâr KKB, 10 - 15 km/saat. Kar ihtimali %50. 2 cm'den az kar birikimi.",
+          "pop": "50"
+        }
+      ]
+    },
+    "simpleforecast": {
+      "forecastday": [
+        {
+          "date": {
+            "epoch": "1512064800",
+            "pretty": "Saat: 07:00 PM CET Tarih: 30 Kasım 2017",
+            "day": 30,
+            "month": 11,
+            "year": 2017,
+            "yday": 333,
+            "hour": 19,
+            "min": "00",
+            "sec": 0,
+            "isdst": "0",
+            "monthname": "Kasım",
+            "monthname_short": "Kas",
+            "weekday_short": "Prş",
+            "weekday": "Perşembe",
+            "ampm": "PM",
+            "tz_short": "CET",
+            "tz_long": "Europe/Stockholm"
+          },
+          "period": 1,
+          "high": {
+            "fahrenheit": "22",
+            "celsius": "-6"
+          },
+          "low": {
+            "fahrenheit": "16",
+            "celsius": "-9"
+          },
+          "conditions": "Kapalı",
+          "icon": "cloudy",
+          "icon_url": "http://icons.wxug.com/i/c/k/cloudy.gif",
+          "skyicon": "",
+          "pop": 0,
+          "qpf_allday": {
+            "in": 0.0,
+            "mm": 0
+          },
+          "qpf_day": {
+            "in": 0.0,
+            "mm": 0
+          },
+          "qpf_night": {
+            "in": 0.0,
+            "mm": 0
+          },
+          "snow_allday": {
+            "in": 0.0,
+            "cm": 0.0
+          },
+          "snow_day": {
+            "in": 0.0,
+            "cm": 0.0
+          },
+          "snow_night": {
+            "in": 0.0,
+            "cm": 0.0
+          },
+          "maxwind": {
+            "mph": 10,
+            "kph": 16,
+            "dir": "K",
+            "degrees": 10
+          },
+          "avewind": {
+            "mph": 5,
+            "kph": 8,
+            "dir": "K",
+            "degrees": 10
+          },
+          "avehumidity": 91,
+          "maxhumidity": 0,
+          "minhumidity": 0
+        },
+        {
+          "date": {
+            "epoch": "1512151200",
+            "pretty": "Saat: 07:00 PM CET Tarih: 01 Aralık 2017",
+            "day": 1,
+            "month": 12,
+            "year": 2017,
+            "yday": 334,
+            "hour": 19,
+            "min": "00",
+            "sec": 0,
+            "isdst": "0",
+            "monthname": "Aralık",
+            "monthname_short": "Ara",
+            "weekday_short": "Cum",
+            "weekday": "Cuma",
+            "ampm": "PM",
+            "tz_short": "CET",
+            "tz_long": "Europe/Stockholm"
+          },
+          "period": 2,
+          "high": {
+            "fahrenheit": "17",
+            "celsius": "-8"
+          },
+          "low": {
+            "fahrenheit": "14",
+            "celsius": "-10"
+          },
+          "conditions": "Parçalı Bulutlu",
+          "icon": "partlycloudy",
+          "icon_url": "http://icons.wxug.com/i/c/k/partlycloudy.gif",
+          "skyicon": "",
+          "pop": 10,
+          "qpf_allday": {
+            "in": 0.04,
+            "mm": 1
+          },
+          "qpf_day": {
+            "in": 0.0,
+            "mm": 0
+          },
+          "qpf_night": {
+            "in": 0.04,
+            "mm": 1
+          },
+          "snow_allday": {
+            "in": 0.6,
+            "cm": 1.5
+          },
+          "snow_day": {
+            "in": 0.0,
+            "cm": 0.0
+          },
+          "snow_night": {
+            "in": 0.6,
+            "cm": 1.5
+          },
+          "maxwind": {
+            "mph": 10,
+            "kph": 16,
+            "dir": "KB",
+            "degrees": 316
+          },
+          "avewind": {
+            "mph": 5,
+            "kph": 8,
+            "dir": "KB",
+            "degrees": 316
+          },
+          "avehumidity": 87,
+          "maxhumidity": 0,
+          "minhumidity": 0
+        },
+        {
+          "date": {
+            "epoch": "1512237600",
+            "pretty": "Saat: 07:00 PM CET Tarih: 02 Aralık 2017",
+            "day": 2,
+            "month": 12,
+            "year": 2017,
+            "yday": 335,
+            "hour": 19,
+            "min": "00",
+            "sec": 0,
+            "isdst": "0",
+            "monthname": "Aralık",
+            "monthname_short": "Ara",
+            "weekday_short": "Cmt",
+            "weekday": "Cumartesi",
+            "ampm": "PM",
+            "tz_short": "CET",
+            "tz_long": "Europe/Stockholm"
+          },
+          "period": 3,
+          "high": {
+            "fahrenheit": "30",
+            "celsius": "-1"
+          },
+          "low": {
+            "fahrenheit": "21",
+            "celsius": "-6"
+          },
+          "conditions": "Buz Parçacıkları",
+          "icon": "sleet",
+          "icon_url": "http://icons.wxug.com/i/c/k/sleet.gif",
+          "skyicon": "",
+          "pop": 60,
+          "qpf_allday": {
+            "in": 0.04,
+            "mm": 1
+          },
+          "qpf_day": {
+            "in": 0.04,
+            "mm": 1
+          },
+          "qpf_night": {
+            "in": 0.0,
+            "mm": 0
+          },
+          "snow_allday": {
+            "in": 0.0,
+            "cm": 0.0
+          },
+          "snow_day": {
+            "in": 0.0,
+            "cm": 0.0
+          },
+          "snow_night": {
+            "in": 0.0,
+            "cm": 0.0
+          },
+          "maxwind": {
+            "mph": 10,
+            "kph": 16,
+            "dir": "GB",
+            "degrees": 235
+          },
+          "avewind": {
+            "mph": 9,
+            "kph": 14,
+            "dir": "GB",
+            "degrees": 235
+          },
+          "avehumidity": 92,
+          "maxhumidity": 0,
+          "minhumidity": 0
+        },
+        {
+          "date": {
+            "epoch": "1512324000",
+            "pretty": "Saat: 07:00 PM CET Tarih: 03 Aralık 2017",
+            "day": 3,
+            "month": 12,
+            "year": 2017,
+            "yday": 336,
+            "hour": 19,
+            "min": "00",
+            "sec": 0,
+            "isdst": "0",
+            "monthname": "Aralık",
+            "monthname_short": "Ara",
+            "weekday_short": "Paz",
+            "weekday": "Pazar",
+            "ampm": "PM",
+            "tz_short": "CET",
+            "tz_long": "Europe/Stockholm"
+          },
+          "period": 4,
+          "high": {
+            "fahrenheit": "25",
+            "celsius": "-4"
+          },
+          "low": {
+            "fahrenheit": "22",
+            "celsius": "-6"
+          },
+          "conditions": "Açık",
+          "icon": "clear",
+          "icon_url": "http://icons.wxug.com/i/c/k/clear.gif",
+          "skyicon": "",
+          "pop": 10,
+          "qpf_allday": {
+            "in": 0.0,
+            "mm": 0
+          },
+          "qpf_day": {
+            "in": 0.0,
+            "mm": 0
+          },
+          "qpf_night": {
+            "in": 0.0,
+            "mm": 0
+          },
+          "snow_allday": {
+            "in": 0.0,
+            "cm": 0.0
+          },
+          "snow_day": {
+            "in": 0.0,
+            "cm": 0.0
+          },
+          "snow_night": {
+            "in": 0.0,
+            "cm": 0.0
+          },
+          "maxwind": {
+            "mph": 15,
+            "kph": 24,
+            "dir": "BGB",
+            "degrees": 256
+          },
+          "avewind": {
+            "mph": 10,
+            "kph": 16,
+            "dir": "BGB",
+            "degrees": 256
+          },
+          "avehumidity": 87,
+          "maxhumidity": 0,
+          "minhumidity": 0
+        },
+        {
+          "date": {
+            "epoch": "1512410400",
+            "pretty": "Saat: 07:00 PM CET Tarih: 04 Aralık 2017",
+            "day": 4,
+            "month": 12,
+            "year": 2017,
+            "yday": 337,
+            "hour": 19,
+            "min": "00",
+            "sec": 0,
+            "isdst": "0",
+            "monthname": "Aralık",
+            "monthname_short": "Ara",
+            "weekday_short": "Pzt",
+            "weekday": "Pazartesi",
+            "ampm": "PM",
+            "tz_short": "CET",
+            "tz_long": "Europe/Stockholm"
+          },
+          "period": 5,
+          "high": {
+            "fahrenheit": "24",
+            "celsius": "-4"
+          },
+          "low": {
+            "fahrenheit": "16",
+            "celsius": "-9"
+          },
+          "conditions": "Parçalı Bulutlu",
+          "icon": "partlycloudy",
+          "icon_url": "http://icons.wxug.com/i/c/k/partlycloudy.gif",
+          "skyicon": "",
+          "pop": 20,
+          "qpf_allday": {
+            "in": 0.0,
+            "mm": 0
+          },
+          "qpf_day": {
+            "in": 0.0,
+            "mm": 0
+          },
+          "qpf_night": {
+            "in": 0.0,
+            "mm": 0
+          },
+          "snow_allday": {
+            "in": 0.0,
+            "cm": 0.0
+          },
+          "snow_day": {
+            "in": 0.0,
+            "cm": 0.0
+          },
+          "snow_night": {
+            "in": 0.0,
+            "cm": 0.0
+          },
+          "maxwind": {
+            "mph": 15,
+            "kph": 24,
+            "dir": "BKB",
+            "degrees": 299
+          },
+          "avewind": {
+            "mph": 10,
+            "kph": 16,
+            "dir": "BKB",
+            "degrees": 299
+          },
+          "avehumidity": 89,
+          "maxhumidity": 0,
+          "minhumidity": 0
+        },
+        {
+          "date": {
+            "epoch": "1512496800",
+            "pretty": "Saat: 07:00 PM CET Tarih: 05 Aralık 2017",
+            "day": 5,
+            "month": 12,
+            "year": 2017,
+            "yday": 338,
+            "hour": 19,
+            "min": "00",
+            "sec": 0,
+            "isdst": "0",
+            "monthname": "Aralık",
+            "monthname_short": "Ara",
+            "weekday_short": "Sal",
+            "weekday": "Salı",
+            "ampm": "PM",
+            "tz_short": "CET",
+            "tz_long": "Europe/Stockholm"
+          },
+          "period": 6,
+          "high": {
+            "fahrenheit": "25",
+            "celsius": "-4"
+          },
+          "low": {
+            "fahrenheit": "18",
+            "celsius": "-8"
+          },
+          "conditions": "Sağanak Kar",
+          "icon": "snow",
+          "icon_url": "http://icons.wxug.com/i/c/k/snow.gif",
+          "skyicon": "",
+          "pop": 40,
+          "qpf_allday": {
+            "in": 0.02,
+            "mm": 1
+          },
+          "qpf_day": {
+            "in": 0.02,
+            "mm": 1
+          },
+          "qpf_night": {
+            "in": 0.0,
+            "mm": 0
+          },
+          "snow_allday": {
+            "in": 0.3,
+            "cm": 0.8
+          },
+          "snow_day": {
+            "in": 0.3,
+            "cm": 0.8
+          },
+          "snow_night": {
+            "in": 0.0,
+            "cm": 0.0
+          },
+          "maxwind": {
+            "mph": 15,
+            "kph": 24,
+            "dir": "BGB",
+            "degrees": 252
+          },
+          "avewind": {
+            "mph": 12,
+            "kph": 19,
+            "dir": "BGB",
+            "degrees": 252
+          },
+          "avehumidity": 88,
+          "maxhumidity": 0,
+          "minhumidity": 0
+        },
+        {
+          "date": {
+            "epoch": "1512583200",
+            "pretty": "Saat: 07:00 PM CET Tarih: 06 Aralık 2017",
+            "day": 6,
+            "month": 12,
+            "year": 2017,
+            "yday": 339,
+            "hour": 19,
+            "min": "00",
+            "sec": 0,
+            "isdst": "0",
+            "monthname": "Aralık",
+            "monthname_short": "Ara",
+            "weekday_short": "Çrş",
+            "weekday": "Çarşamba",
+            "ampm": "PM",
+            "tz_short": "CET",
+            "tz_long": "Europe/Stockholm"
+          },
+          "period": 7,
+          "high": {
+            "fahrenheit": "21",
+            "celsius": "-6"
+          },
+          "low": {
+            "fahrenheit": "14",
+            "celsius": "-10"
+          },
+          "conditions": "Parçalı Bulutlu",
+          "icon": "partlycloudy",
+          "icon_url": "http://icons.wxug.com/i/c/k/partlycloudy.gif",
+          "skyicon": "",
+          "pop": 20,
+          "qpf_allday": {
+            "in": 0.0,
+            "mm": 0
+          },
+          "qpf_day": {
+            "in": 0.0,
+            "mm": 0
+          },
+          "qpf_night": {
+            "in": 0.0,
+            "mm": 0
+          },
+          "snow_allday": {
+            "in": 0.0,
+            "cm": 0.0
+          },
+          "snow_day": {
+            "in": 0.0,
+            "cm": 0.0
+          },
+          "snow_night": {
+            "in": 0.0,
+            "cm": 0.0
+          },
+          "maxwind": {
+            "mph": 10,
+            "kph": 16,
+            "dir": "B",
+            "degrees": 279
+          },
+          "avewind": {
+            "mph": 7,
+            "kph": 11,
+            "dir": "B",
+            "degrees": 279
+          },
+          "avehumidity": 92,
+          "maxhumidity": 0,
+          "minhumidity": 0
+        },
+        {
+          "date": {
+            "epoch": "1512669600",
+            "pretty": "Saat: 07:00 PM CET Tarih: 07 Aralık 2017",
+            "day": 7,
+            "month": 12,
+            "year": 2017,
+            "yday": 340,
+            "hour": 19,
+            "min": "00",
+            "sec": 0,
+            "isdst": "0",
+            "monthname": "Aralık",
+            "monthname_short": "Ara",
+            "weekday_short": "Prş",
+            "weekday": "Perşembe",
+            "ampm": "PM",
+            "tz_short": "CET",
+            "tz_long": "Europe/Stockholm"
+          },
+          "period": 8,
+          "high": {
+            "fahrenheit": "19",
+            "celsius": "-7"
+          },
+          "low": {
+            "fahrenheit": "17",
+            "celsius": "-8"
+          },
+          "conditions": "Sağanak Kar",
+          "icon": "snow",
+          "icon_url": "http://icons.wxug.com/i/c/k/snow.gif",
+          "skyicon": "",
+          "pop": 40,
+          "qpf_allday": {
+            "in": 0.26,
+            "mm": 7
+          },
+          "qpf_day": {
+            "in": 0.05,
+            "mm": 1
+          },
+          "qpf_night": {
+            "in": 0.21,
+            "mm": 5
+          },
+          "snow_allday": {
+            "in": 3.7,
+            "cm": 9.4
+          },
+          "snow_day": {
+            "in": 0.7,
+            "cm": 1.8
+          },
+          "snow_night": {
+            "in": 3.0,
+            "cm": 7.6
+          },
+          "maxwind": {
+            "mph": 10,
+            "kph": 16,
+            "dir": "BKB",
+            "degrees": 292
+          },
+          "avewind": {
+            "mph": 6,
+            "kph": 10,
+            "dir": "BKB",
+            "degrees": 292
+          },
+          "avehumidity": 92,
+          "maxhumidity": 0,
+          "minhumidity": 0
+        },
+        {
+          "date": {
+            "epoch": "1512756000",
+            "pretty": "Saat: 07:00 PM CET Tarih: 08 Aralık 2017",
+            "day": 8,
+            "month": 12,
+            "year": 2017,
+            "yday": 341,
+            "hour": 19,
+            "min": "00",
+            "sec": 0,
+            "isdst": "0",
+            "monthname": "Aralık",
+            "monthname_short": "Ara",
+            "weekday_short": "Cum",
+            "weekday": "Cuma",
+            "ampm": "PM",
+            "tz_short": "CET",
+            "tz_long": "Europe/Stockholm"
+          },
+          "period": 9,
+          "high": {
+            "fahrenheit": "21",
+            "celsius": "-6"
+          },
+          "low": {
+            "fahrenheit": "16",
+            "celsius": "-9"
+          },
+          "conditions": "Kar",
+          "icon": "snow",
+          "icon_url": "http://icons.wxug.com/i/c/k/snow.gif",
+          "skyicon": "",
+          "pop": 60,
+          "qpf_allday": {
+            "in": 0.33,
+            "mm": 8
+          },
+          "qpf_day": {
+            "in": 0.26,
+            "mm": 7
+          },
+          "qpf_night": {
+            "in": 0.07,
+            "mm": 2
+          },
+          "snow_allday": {
+            "in": 4.7,
+            "cm": 11.9
+          },
+          "snow_day": {
+            "in": 3.6,
+            "cm": 9.1
+          },
+          "snow_night": {
+            "in": 1.1,
+            "cm": 2.8
+          },
+          "maxwind": {
+            "mph": 10,
+            "kph": 16,
+            "dir": "KKB",
+            "degrees": 333
+          },
+          "avewind": {
+            "mph": 8,
+            "kph": 13,
+            "dir": "KKB",
+            "degrees": 333
+          },
+          "avehumidity": 87,
+          "maxhumidity": 0,
+          "minhumidity": 0
+        },
+        {
+          "date": {
+            "epoch": "1512842400",
+            "pretty": "Saat: 07:00 PM CET Tarih: 09 Aralık 2017",
+            "day": 9,
+            "month": 12,
+            "year": 2017,
+            "yday": 342,
+            "hour": 19,
+            "min": "00",
+            "sec": 0,
+            "isdst": "0",
+            "monthname": "Aralık",
+            "monthname_short": "Ara",
+            "weekday_short": "Cmt",
+            "weekday": "Cumartesi",
+            "ampm": "PM",
+            "tz_short": "CET",
+            "tz_long": "Europe/Stockholm"
+          },
+          "period": 10,
+          "high": {
+            "fahrenheit": "18",
+            "celsius": "-8"
+          },
+          "low": {
+            "fahrenheit": "12",
+            "celsius": "-11"
+          },
+          "conditions": "Sağanak Kar",
+          "icon": "snow",
+          "icon_url": "http://icons.wxug.com/i/c/k/snow.gif",
+          "skyicon": "",
+          "pop": 60,
+          "qpf_allday": {
+            "in": 0.18,
+            "mm": 5
+          },
+          "qpf_day": {
+            "in": 0.13,
+            "mm": 3
+          },
+          "qpf_night": {
+            "in": 0.05,
+            "mm": 1
+          },
+          "snow_allday": {
+            "in": 2.7,
+            "cm": 6.9
+          },
+          "snow_day": {
+            "in": 2.0,
+            "cm": 5.1
+          },
+          "snow_night": {
+            "in": 0.7,
+            "cm": 1.8
+          },
+          "maxwind": {
+            "mph": 10,
+            "kph": 16,
+            "dir": "KKB",
+            "degrees": 342
+          },
+          "avewind": {
+            "mph": 9,
+            "kph": 14,
+            "dir": "KKB",
+            "degrees": 342
+          },
+          "avehumidity": 83,
+          "maxhumidity": 0,
+          "minhumidity": 0
+        }
+      ]
+    }
+  }
+}

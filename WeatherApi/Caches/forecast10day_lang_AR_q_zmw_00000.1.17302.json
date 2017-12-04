@@ -1,0 +1,940 @@
+{
+  "response": {
+    "version": "0.1",
+    "termsofService": "http://www.wunderground.com/weather/api/d/terms.html",
+    "features": {
+      "forecast10day": 1
+    }
+  },
+  "forecast": {
+    "txt_forecast": {
+      "date": "5:48 PM +03",
+      "forecastday": [
+        {
+          "period": 0,
+          "icon": "partlycloudy",
+          "icon_url": "http://icons.wxug.com/i/c/k/partlycloudy.gif",
+          "title": "الخميس",
+          "fcttext": "غائم جزئيًا. درجة الحرارة الصغرى 49 درجة فهرنهيت.",
+          "fcttext_metric": "غائم جزئيًا. درجة الحرارة الصغرى 10 درجة مئوية.",
+          "pop": "0"
+        },
+        {
+          "period": 1,
+          "icon": "nt_partlycloudy",
+          "icon_url": "http://icons.wxug.com/i/c/k/nt_partlycloudy.gif",
+          "title": "ليلة الخميس",
+          "fcttext": "غائم جزئيًا. درجة الحرارة الصغرى 49 درجة فهرنهيت. رياح شمال-شمال غرب بسرعة تتراوح من 5 إلى 10 ميل/ساعة.",
+          "fcttext_metric": "غائم جزئيًا. درجة الحرارة الصغرى 10 درجة مئوية. رياح شمال-شمال غرب بسرعة تتراوح من 10 إلى 15 كم/ساعة.",
+          "pop": "0"
+        },
+        {
+          "period": 2,
+          "icon": "partlycloudy",
+          "icon_url": "http://icons.wxug.com/i/c/k/partlycloudy.gif",
+          "title": "الجمعة",
+          "fcttext": "غائم جزئيًا. درجة الحرارة العظمى 65 درجة فهرنهيت رياح شمال-شمال شرق بسرعة تتراوح من 5 إلى 10 ميل/ساعة.",
+          "fcttext_metric": "غائم جزئيًا. درجة الحرارة العظمى 18 درجة مئوية رياح شمال-شمال شرق بسرعة تتراوح من 10 إلى 15 كم/ساعة.",
+          "pop": "10"
+        },
+        {
+          "period": 3,
+          "icon": "nt_mostlycloudy",
+          "icon_url": "http://icons.wxug.com/i/c/k/nt_mostlycloudy.gif",
+          "title": "ليلة الجمعة",
+          "fcttext": "غائم في الأغلب. درجة الحرارة الصغرى 53 درجة فهرنهيت. رياح شمال-شمال غرب ومتقلبة.",
+          "fcttext_metric": "غائم في الأغلب. درجة الحرارة الصغرى 12 درجة مئوية. رياح شمال-شمال غرب ومتقلبة.",
+          "pop": "20"
+        },
+        {
+          "period": 4,
+          "icon": "partlycloudy",
+          "icon_url": "http://icons.wxug.com/i/c/k/partlycloudy.gif",
+          "title": "السبت",
+          "fcttext": "سحب صباحًا يتبعها سطوع الشمس بعد الظهر. درجة الحرارة العظمى 66 درجة فهرنهيت رياح شمال بسرعة تتراوح من 5 إلى 10 ميل/ساعة.",
+          "fcttext_metric": "سحب صباحًا يتبعها سطوع الشمس بعد الظهر. درجة الحرارة العظمى 19 درجة مئوية رياح شمال ومتقلبة.",
+          "pop": "10"
+        },
+        {
+          "period": 5,
+          "icon": "nt_partlycloudy",
+          "icon_url": "http://icons.wxug.com/i/c/k/nt_partlycloudy.gif",
+          "title": "ليلة السبت",
+          "fcttext": "غائم جزئيًا. درجة الحرارة الصغرى 52 درجة فهرنهيت. رياح شمال-شمال غرب ومتقلبة.",
+          "fcttext_metric": "غائم جزئيًا. درجة الحرارة الصغرى 11 درجة مئوية. رياح شمال-شمال غرب ومتقلبة.",
+          "pop": "10"
+        },
+        {
+          "period": 6,
+          "icon": "partlycloudy",
+          "icon_url": "http://icons.wxug.com/i/c/k/partlycloudy.gif",
+          "title": "الأحد",
+          "fcttext": "غائم جزئيًا. درجة الحرارة العظمى 69 درجة فهرنهيت رياح شمال ومتقلبة.",
+          "fcttext_metric": "غائم جزئيًا. درجة الحرارة العظمى 21 درجة مئوية رياح شمال ومتقلبة.",
+          "pop": "0"
+        },
+        {
+          "period": 7,
+          "icon": "nt_partlycloudy",
+          "icon_url": "http://icons.wxug.com/i/c/k/nt_partlycloudy.gif",
+          "title": "ليلة الأحد",
+          "fcttext": "غائم جزئيًا. درجة الحرارة الصغرى 49 درجة فهرنهيت. رياح شمال-شمال غرب ومتقلبة.",
+          "fcttext_metric": "غائم جزئيًا. درجة الحرارة الصغرى 10 درجة مئوية. رياح شمال-شمال غرب ومتقلبة.",
+          "pop": "0"
+        },
+        {
+          "period": 8,
+          "icon": "partlycloudy",
+          "icon_url": "http://icons.wxug.com/i/c/k/partlycloudy.gif",
+          "title": "الاثنين",
+          "fcttext": "غائم جزئيًا. درجة الحرارة العظمى 69 درجة فهرنهيت رياح شرق-جنوب شرق بسرعة تتراوح من 5 إلى 10 ميل/ساعة.",
+          "fcttext_metric": "غائم جزئيًا. درجة الحرارة العظمى 21 درجة مئوية رياح شرق-جنوب شرق بسرعة تتراوح من 10 إلى 15 كم/ساعة.",
+          "pop": "10"
+        },
+        {
+          "period": 9,
+          "icon": "nt_partlycloudy",
+          "icon_url": "http://icons.wxug.com/i/c/k/nt_partlycloudy.gif",
+          "title": "ليلة الاثنين",
+          "fcttext": "غائم جزئيًا. درجة الحرارة الصغرى 51 درجة فهرنهيت. رياح شمال بسرعة تتراوح من 5 إلى 10 ميل/ساعة.",
+          "fcttext_metric": "غائم جزئيًا. درجة الحرارة الصغرى 11 درجة مئوية. رياح شمال بسرعة تتراوح من 10 إلى 15 كم/ساعة.",
+          "pop": "20"
+        },
+        {
+          "period": 10,
+          "icon": "partlycloudy",
+          "icon_url": "http://icons.wxug.com/i/c/k/partlycloudy.gif",
+          "title": "الثلاثاء",
+          "fcttext": "غائم جزئيًا. درجة الحرارة العظمى 67 درجة فهرنهيت رياح شمال بسرعة تتراوح من 10 إلى 20 ميل/ساعة.",
+          "fcttext_metric": "غائم جزئيًا. درجة الحرارة العظمى 19 درجة مئوية رياح شمال بسرعة تتراوح من 15 إلى 30 كم/ساعة.",
+          "pop": "10"
+        },
+        {
+          "period": 11,
+          "icon": "nt_clear",
+          "icon_url": "http://icons.wxug.com/i/c/k/nt_clear.gif",
+          "title": "ليلة الثلاثاء",
+          "fcttext": "صافٍ غالبًا. درجة الحرارة الصغرى 44 درجة فهرنهيت. رياح شمال-شمال غرب بسرعة تتراوح من 15 إلى 25 ميل/ساعة.",
+          "fcttext_metric": "صافٍ غالبًا. درجة الحرارة الصغرى 7 درجة مئوية. رياح شمال-شمال غرب بسرعة تتراوح من 15 إلى 30 كم/ساعة.",
+          "pop": "0"
+        },
+        {
+          "period": 12,
+          "icon": "partlycloudy",
+          "icon_url": "http://icons.wxug.com/i/c/k/partlycloudy.gif",
+          "title": "الأربعاء",
+          "fcttext": "صافٍ غالبًا وعاصف. درجة الحرارة العظمى 58 درجة فهرنهيت رياح شمال-شمال غرب بسرعة تتراوح من 20 إلى 30 ميل/ساعة.",
+          "fcttext_metric": "صافٍ غالبًا وعاصف. درجة الحرارة العظمى 14 درجة مئوية رياح شمال-شمال غرب بسرعة تتراوح من 30 إلى 50 كم/ساعة.",
+          "pop": "0"
+        },
+        {
+          "period": 13,
+          "icon": "nt_clear",
+          "icon_url": "http://icons.wxug.com/i/c/k/nt_clear.gif",
+          "title": "ليلة الأربعاء",
+          "fcttext": "صافٍ غالبًا. درجة الحرارة الصغرى 40 درجة فهرنهيت. رياح شمال-شمال غرب بسرعة تتراوح من 15 إلى 25 ميل/ساعة.",
+          "fcttext_metric": "صافٍ غالبًا. درجة الحرارة الصغرى 5 درجة مئوية. رياح شمال-شمال غرب بسرعة تتراوح من 15 إلى 30 كم/ساعة.",
+          "pop": "0"
+        },
+        {
+          "period": 14,
+          "icon": "clear",
+          "icon_url": "http://icons.wxug.com/i/c/k/clear.gif",
+          "title": "الخميس",
+          "fcttext": "صافٍ غالبًا. درجة الحرارة العظمى 60 درجة فهرنهيت رياح شمال-شمال غرب بسرعة تتراوح من 10 إلى 20 ميل/ساعة.",
+          "fcttext_metric": "صافٍ غالبًا. درجة الحرارة العظمى 15 درجة مئوية رياح شمال-شمال غرب بسرعة تتراوح من 15 إلى 30 كم/ساعة.",
+          "pop": "0"
+        },
+        {
+          "period": 15,
+          "icon": "nt_clear",
+          "icon_url": "http://icons.wxug.com/i/c/k/nt_clear.gif",
+          "title": "ليلة الخميس",
+          "fcttext": "صافٍ غالبًا. درجة الحرارة الصغرى 42 درجة فهرنهيت. رياح شمال-شمال غرب بسرعة تتراوح من 10 إلى 15 ميل/ساعة.",
+          "fcttext_metric": "صافٍ غالبًا. درجة الحرارة الصغرى 6 درجة مئوية. رياح شمال-شمال غرب بسرعة تتراوح من 10 إلى 15 كم/ساعة.",
+          "pop": "0"
+        },
+        {
+          "period": 16,
+          "icon": "clear",
+          "icon_url": "http://icons.wxug.com/i/c/k/clear.gif",
+          "title": "الجمعة",
+          "fcttext": "صافٍ غالبًا. درجة الحرارة العظمى 60 درجة فهرنهيت رياح شمال-شمال غرب بسرعة تتراوح من 5 إلى 10 ميل/ساعة.",
+          "fcttext_metric": "صافٍ غالبًا. درجة الحرارة العظمى 16 درجة مئوية رياح شمال-شمال غرب بسرعة تتراوح من 10 إلى 15 كم/ساعة.",
+          "pop": "0"
+        },
+        {
+          "period": 17,
+          "icon": "nt_clear",
+          "icon_url": "http://icons.wxug.com/i/c/k/nt_clear.gif",
+          "title": "ليلة الجمعة",
+          "fcttext": "صافٍ غالبًا. درجة الحرارة الصغرى 43 درجة فهرنهيت. رياح شمال-شمال غرب بسرعة تتراوح من 5 إلى 10 ميل/ساعة.",
+          "fcttext_metric": "صافٍ غالبًا. درجة الحرارة الصغرى 6 درجة مئوية. رياح شمال-شمال غرب بسرعة تتراوح من 10 إلى 15 كم/ساعة.",
+          "pop": "10"
+        },
+        {
+          "period": 18,
+          "icon": "partlycloudy",
+          "icon_url": "http://icons.wxug.com/i/c/k/partlycloudy.gif",
+          "title": "السبت",
+          "fcttext": "غائم جزئيًا. درجة الحرارة العظمى 60 درجة فهرنهيت رياح شمال بسرعة تتراوح من 5 إلى 10 ميل/ساعة.",
+          "fcttext_metric": "غائم جزئيًا. درجة الحرارة العظمى 16 درجة مئوية رياح شمال بسرعة تتراوح من 10 إلى 15 كم/ساعة.",
+          "pop": "10"
+        },
+        {
+          "period": 19,
+          "icon": "nt_partlycloudy",
+          "icon_url": "http://icons.wxug.com/i/c/k/nt_partlycloudy.gif",
+          "title": "ليلة السبت",
+          "fcttext": "غائم جزئيًا. درجة الحرارة الصغرى 44 درجة فهرنهيت. رياح شمال-شمال غرب ومتقلبة.",
+          "fcttext_metric": "غائم جزئيًا. درجة الحرارة الصغرى 7 درجة مئوية. رياح شمال-شمال غرب ومتقلبة.",
+          "pop": "20"
+        }
+      ]
+    },
+    "simpleforecast": {
+      "forecastday": [
+        {
+          "date": {
+            "epoch": "1512057600",
+            "pretty": "07:00 PM +03 on وèلهبر 30, 2017",
+            "day": 30,
+            "month": 11,
+            "year": 2017,
+            "yday": 333,
+            "hour": 19,
+            "min": "00",
+            "sec": 0,
+            "isdst": "0",
+            "monthname": "وèلهبر",
+            "monthname_short": "وèل",
+            "weekday_short": "الخميس",
+            "weekday": "الخميس",
+            "ampm": "PM",
+            "tz_short": "+03",
+            "tz_long": "Europe/Istanbul"
+          },
+          "period": 1,
+          "high": {
+            "fahrenheit": "66",
+            "celsius": "18"
+          },
+          "low": {
+            "fahrenheit": "49",
+            "celsius": "9"
+          },
+          "conditions": "غائم جزئياً",
+          "icon": "partlycloudy",
+          "icon_url": "http://icons.wxug.com/i/c/k/partlycloudy.gif",
+          "skyicon": "",
+          "pop": 0,
+          "qpf_allday": {
+            "in": 0.0,
+            "mm": 0
+          },
+          "qpf_day": {
+            "in": null,
+            "mm": null
+          },
+          "qpf_night": {
+            "in": 0.0,
+            "mm": 0
+          },
+          "snow_allday": {
+            "in": 0.0,
+            "cm": 0.0
+          },
+          "snow_day": {
+            "in": null,
+            "cm": null
+          },
+          "snow_night": {
+            "in": 0.0,
+            "cm": 0.0
+          },
+          "maxwind": {
+            "mph": 8,
+            "kph": 13,
+            "dir": "شمال",
+            "degrees": 0
+          },
+          "avewind": {
+            "mph": 5,
+            "kph": 8,
+            "dir": "شمال",
+            "degrees": 0
+          },
+          "avehumidity": 79,
+          "maxhumidity": 0,
+          "minhumidity": 0
+        },
+        {
+          "date": {
+            "epoch": "1512144000",
+            "pretty": "07:00 PM +03 on دسمبر 01, 2017",
+            "day": 1,
+            "month": 12,
+            "year": 2017,
+            "yday": 334,
+            "hour": 19,
+            "min": "00",
+            "sec": 0,
+            "isdst": "0",
+            "monthname": "دسمبر",
+            "monthname_short": "دêس",
+            "weekday_short": "الجمعة",
+            "weekday": "الجمعة",
+            "ampm": "PM",
+            "tz_short": "+03",
+            "tz_long": "Europe/Istanbul"
+          },
+          "period": 2,
+          "high": {
+            "fahrenheit": "65",
+            "celsius": "18"
+          },
+          "low": {
+            "fahrenheit": "53",
+            "celsius": "12"
+          },
+          "conditions": "غائم جزئياً",
+          "icon": "partlycloudy",
+          "icon_url": "http://icons.wxug.com/i/c/k/partlycloudy.gif",
+          "skyicon": "",
+          "pop": 10,
+          "qpf_allday": {
+            "in": 0.0,
+            "mm": 0
+          },
+          "qpf_day": {
+            "in": 0.0,
+            "mm": 0
+          },
+          "qpf_night": {
+            "in": 0.0,
+            "mm": 0
+          },
+          "snow_allday": {
+            "in": 0.0,
+            "cm": 0.0
+          },
+          "snow_day": {
+            "in": 0.0,
+            "cm": 0.0
+          },
+          "snow_night": {
+            "in": 0.0,
+            "cm": 0.0
+          },
+          "maxwind": {
+            "mph": 10,
+            "kph": 16,
+            "dir": "شمال-شمال شرق",
+            "degrees": 29
+          },
+          "avewind": {
+            "mph": 6,
+            "kph": 10,
+            "dir": "شمال-شمال شرق",
+            "degrees": 29
+          },
+          "avehumidity": 69,
+          "maxhumidity": 0,
+          "minhumidity": 0
+        },
+        {
+          "date": {
+            "epoch": "1512230400",
+            "pretty": "07:00 PM +03 on دسمبر 02, 2017",
+            "day": 2,
+            "month": 12,
+            "year": 2017,
+            "yday": 335,
+            "hour": 19,
+            "min": "00",
+            "sec": 0,
+            "isdst": "0",
+            "monthname": "دسمبر",
+            "monthname_short": "دêس",
+            "weekday_short": "السبت",
+            "weekday": "السبت",
+            "ampm": "PM",
+            "tz_short": "+03",
+            "tz_long": "Europe/Istanbul"
+          },
+          "period": 3,
+          "high": {
+            "fahrenheit": "66",
+            "celsius": "19"
+          },
+          "low": {
+            "fahrenheit": "52",
+            "celsius": "11"
+          },
+          "conditions": "غائم جزئياً",
+          "icon": "partlycloudy",
+          "icon_url": "http://icons.wxug.com/i/c/k/partlycloudy.gif",
+          "skyicon": "",
+          "pop": 10,
+          "qpf_allday": {
+            "in": 0.0,
+            "mm": 0
+          },
+          "qpf_day": {
+            "in": 0.0,
+            "mm": 0
+          },
+          "qpf_night": {
+            "in": 0.0,
+            "mm": 0
+          },
+          "snow_allday": {
+            "in": 0.0,
+            "cm": 0.0
+          },
+          "snow_day": {
+            "in": 0.0,
+            "cm": 0.0
+          },
+          "snow_night": {
+            "in": 0.0,
+            "cm": 0.0
+          },
+          "maxwind": {
+            "mph": 10,
+            "kph": 16,
+            "dir": "شمال",
+            "degrees": 5
+          },
+          "avewind": {
+            "mph": 6,
+            "kph": 10,
+            "dir": "شمال",
+            "degrees": 5
+          },
+          "avehumidity": 68,
+          "maxhumidity": 0,
+          "minhumidity": 0
+        },
+        {
+          "date": {
+            "epoch": "1512316800",
+            "pretty": "07:00 PM +03 on دسمبر 03, 2017",
+            "day": 3,
+            "month": 12,
+            "year": 2017,
+            "yday": 336,
+            "hour": 19,
+            "min": "00",
+            "sec": 0,
+            "isdst": "0",
+            "monthname": "دسمبر",
+            "monthname_short": "دêس",
+            "weekday_short": "الأحد",
+            "weekday": "الأحد",
+            "ampm": "PM",
+            "tz_short": "+03",
+            "tz_long": "Europe/Istanbul"
+          },
+          "period": 4,
+          "high": {
+            "fahrenheit": "69",
+            "celsius": "21"
+          },
+          "low": {
+            "fahrenheit": "49",
+            "celsius": "9"
+          },
+          "conditions": "غائم جزئياً",
+          "icon": "partlycloudy",
+          "icon_url": "http://icons.wxug.com/i/c/k/partlycloudy.gif",
+          "skyicon": "",
+          "pop": 0,
+          "qpf_allday": {
+            "in": 0.0,
+            "mm": 0
+          },
+          "qpf_day": {
+            "in": 0.0,
+            "mm": 0
+          },
+          "qpf_night": {
+            "in": 0.0,
+            "mm": 0
+          },
+          "snow_allday": {
+            "in": 0.0,
+            "cm": 0.0
+          },
+          "snow_day": {
+            "in": 0.0,
+            "cm": 0.0
+          },
+          "snow_night": {
+            "in": 0.0,
+            "cm": 0.0
+          },
+          "maxwind": {
+            "mph": 10,
+            "kph": 16,
+            "dir": "شمال",
+            "degrees": 355
+          },
+          "avewind": {
+            "mph": 5,
+            "kph": 8,
+            "dir": "شمال",
+            "degrees": 355
+          },
+          "avehumidity": 60,
+          "maxhumidity": 0,
+          "minhumidity": 0
+        },
+        {
+          "date": {
+            "epoch": "1512403200",
+            "pretty": "07:00 PM +03 on دسمبر 04, 2017",
+            "day": 4,
+            "month": 12,
+            "year": 2017,
+            "yday": 337,
+            "hour": 19,
+            "min": "00",
+            "sec": 0,
+            "isdst": "0",
+            "monthname": "دسمبر",
+            "monthname_short": "دêس",
+            "weekday_short": "الاثنين",
+            "weekday": "الاثنين",
+            "ampm": "PM",
+            "tz_short": "+03",
+            "tz_long": "Europe/Istanbul"
+          },
+          "period": 5,
+          "high": {
+            "fahrenheit": "69",
+            "celsius": "21"
+          },
+          "low": {
+            "fahrenheit": "51",
+            "celsius": "11"
+          },
+          "conditions": "غائم جزئياً",
+          "icon": "partlycloudy",
+          "icon_url": "http://icons.wxug.com/i/c/k/partlycloudy.gif",
+          "skyicon": "",
+          "pop": 10,
+          "qpf_allday": {
+            "in": 0.0,
+            "mm": 0
+          },
+          "qpf_day": {
+            "in": 0.0,
+            "mm": 0
+          },
+          "qpf_night": {
+            "in": 0.0,
+            "mm": 0
+          },
+          "snow_allday": {
+            "in": 0.0,
+            "cm": 0.0
+          },
+          "snow_day": {
+            "in": 0.0,
+            "cm": 0.0
+          },
+          "snow_night": {
+            "in": 0.0,
+            "cm": 0.0
+          },
+          "maxwind": {
+            "mph": 10,
+            "kph": 16,
+            "dir": "شرق-جنوب شرق",
+            "degrees": 60
+          },
+          "avewind": {
+            "mph": 6,
+            "kph": 10,
+            "dir": "شرق-جنوب شرق",
+            "degrees": 60
+          },
+          "avehumidity": 59,
+          "maxhumidity": 0,
+          "minhumidity": 0
+        },
+        {
+          "date": {
+            "epoch": "1512489600",
+            "pretty": "07:00 PM +03 on دسمبر 05, 2017",
+            "day": 5,
+            "month": 12,
+            "year": 2017,
+            "yday": 338,
+            "hour": 19,
+            "min": "00",
+            "sec": 0,
+            "isdst": "0",
+            "monthname": "دسمبر",
+            "monthname_short": "دêس",
+            "weekday_short": "الثلاثاء",
+            "weekday": "الثلاثاء",
+            "ampm": "PM",
+            "tz_short": "+03",
+            "tz_long": "Europe/Istanbul"
+          },
+          "period": 6,
+          "high": {
+            "fahrenheit": "67",
+            "celsius": "19"
+          },
+          "low": {
+            "fahrenheit": "44",
+            "celsius": "7"
+          },
+          "conditions": "غائم جزئياً",
+          "icon": "partlycloudy",
+          "icon_url": "http://icons.wxug.com/i/c/k/partlycloudy.gif",
+          "skyicon": "",
+          "pop": 10,
+          "qpf_allday": {
+            "in": 0.0,
+            "mm": 0
+          },
+          "qpf_day": {
+            "in": 0.0,
+            "mm": 0
+          },
+          "qpf_night": {
+            "in": 0.0,
+            "mm": 0
+          },
+          "snow_allday": {
+            "in": 0.0,
+            "cm": 0.0
+          },
+          "snow_day": {
+            "in": 0.0,
+            "cm": 0.0
+          },
+          "snow_night": {
+            "in": 0.0,
+            "cm": 0.0
+          },
+          "maxwind": {
+            "mph": 20,
+            "kph": 32,
+            "dir": "شمال",
+            "degrees": 352
+          },
+          "avewind": {
+            "mph": 15,
+            "kph": 24,
+            "dir": "شمال",
+            "degrees": 352
+          },
+          "avehumidity": 49,
+          "maxhumidity": 0,
+          "minhumidity": 0
+        },
+        {
+          "date": {
+            "epoch": "1512576000",
+            "pretty": "07:00 PM +03 on دسمبر 06, 2017",
+            "day": 6,
+            "month": 12,
+            "year": 2017,
+            "yday": 339,
+            "hour": 19,
+            "min": "00",
+            "sec": 0,
+            "isdst": "0",
+            "monthname": "دسمبر",
+            "monthname_short": "دêس",
+            "weekday_short": "الأربعاء",
+            "weekday": "الأربعاء",
+            "ampm": "PM",
+            "tz_short": "+03",
+            "tz_long": "Europe/Istanbul"
+          },
+          "period": 7,
+          "high": {
+            "fahrenheit": "58",
+            "celsius": "14"
+          },
+          "low": {
+            "fahrenheit": "40",
+            "celsius": "4"
+          },
+          "conditions": "غائم جزئياً",
+          "icon": "partlycloudy",
+          "icon_url": "http://icons.wxug.com/i/c/k/partlycloudy.gif",
+          "skyicon": "",
+          "pop": 0,
+          "qpf_allday": {
+            "in": 0.0,
+            "mm": 0
+          },
+          "qpf_day": {
+            "in": 0.0,
+            "mm": 0
+          },
+          "qpf_night": {
+            "in": 0.0,
+            "mm": 0
+          },
+          "snow_allday": {
+            "in": 0.0,
+            "cm": 0.0
+          },
+          "snow_day": {
+            "in": 0.0,
+            "cm": 0.0
+          },
+          "snow_night": {
+            "in": 0.0,
+            "cm": 0.0
+          },
+          "maxwind": {
+            "mph": 30,
+            "kph": 48,
+            "dir": "شمال-شمال غرب",
+            "degrees": 337
+          },
+          "avewind": {
+            "mph": 20,
+            "kph": 32,
+            "dir": "شمال-شمال غرب",
+            "degrees": 337
+          },
+          "avehumidity": 42,
+          "maxhumidity": 0,
+          "minhumidity": 0
+        },
+        {
+          "date": {
+            "epoch": "1512662400",
+            "pretty": "07:00 PM +03 on دسمبر 07, 2017",
+            "day": 7,
+            "month": 12,
+            "year": 2017,
+            "yday": 340,
+            "hour": 19,
+            "min": "00",
+            "sec": 0,
+            "isdst": "0",
+            "monthname": "دسمبر",
+            "monthname_short": "دêس",
+            "weekday_short": "الخميس",
+            "weekday": "الخميس",
+            "ampm": "PM",
+            "tz_short": "+03",
+            "tz_long": "Europe/Istanbul"
+          },
+          "period": 8,
+          "high": {
+            "fahrenheit": "60",
+            "celsius": "16"
+          },
+          "low": {
+            "fahrenheit": "42",
+            "celsius": "6"
+          },
+          "conditions": "صافية",
+          "icon": "clear",
+          "icon_url": "http://icons.wxug.com/i/c/k/clear.gif",
+          "skyicon": "",
+          "pop": 0,
+          "qpf_allday": {
+            "in": 0.0,
+            "mm": 0
+          },
+          "qpf_day": {
+            "in": 0.0,
+            "mm": 0
+          },
+          "qpf_night": {
+            "in": 0.0,
+            "mm": 0
+          },
+          "snow_allday": {
+            "in": 0.0,
+            "cm": 0.0
+          },
+          "snow_day": {
+            "in": 0.0,
+            "cm": 0.0
+          },
+          "snow_night": {
+            "in": 0.0,
+            "cm": 0.0
+          },
+          "maxwind": {
+            "mph": 20,
+            "kph": 32,
+            "dir": "شمال-شمال غرب",
+            "degrees": 340
+          },
+          "avewind": {
+            "mph": 14,
+            "kph": 23,
+            "dir": "شمال-شمال غرب",
+            "degrees": 340
+          },
+          "avehumidity": 40,
+          "maxhumidity": 0,
+          "minhumidity": 0
+        },
+        {
+          "date": {
+            "epoch": "1512748800",
+            "pretty": "07:00 PM +03 on دسمبر 08, 2017",
+            "day": 8,
+            "month": 12,
+            "year": 2017,
+            "yday": 341,
+            "hour": 19,
+            "min": "00",
+            "sec": 0,
+            "isdst": "0",
+            "monthname": "دسمبر",
+            "monthname_short": "دêس",
+            "weekday_short": "الجمعة",
+            "weekday": "الجمعة",
+            "ampm": "PM",
+            "tz_short": "+03",
+            "tz_long": "Europe/Istanbul"
+          },
+          "period": 9,
+          "high": {
+            "fahrenheit": "60",
+            "celsius": "16"
+          },
+          "low": {
+            "fahrenheit": "43",
+            "celsius": "6"
+          },
+          "conditions": "صافية",
+          "icon": "clear",
+          "icon_url": "http://icons.wxug.com/i/c/k/clear.gif",
+          "skyicon": "",
+          "pop": 0,
+          "qpf_allday": {
+            "in": 0.0,
+            "mm": 0
+          },
+          "qpf_day": {
+            "in": 0.0,
+            "mm": 0
+          },
+          "qpf_night": {
+            "in": 0.0,
+            "mm": 0
+          },
+          "snow_allday": {
+            "in": 0.0,
+            "cm": 0.0
+          },
+          "snow_day": {
+            "in": 0.0,
+            "cm": 0.0
+          },
+          "snow_night": {
+            "in": 0.0,
+            "cm": 0.0
+          },
+          "maxwind": {
+            "mph": 10,
+            "kph": 16,
+            "dir": "شمال-شمال غرب",
+            "degrees": 348
+          },
+          "avewind": {
+            "mph": 7,
+            "kph": 11,
+            "dir": "شمال-شمال غرب",
+            "degrees": 348
+          },
+          "avehumidity": 48,
+          "maxhumidity": 0,
+          "minhumidity": 0
+        },
+        {
+          "date": {
+            "epoch": "1512835200",
+            "pretty": "07:00 PM +03 on دسمبر 09, 2017",
+            "day": 9,
+            "month": 12,
+            "year": 2017,
+            "yday": 342,
+            "hour": 19,
+            "min": "00",
+            "sec": 0,
+            "isdst": "0",
+            "monthname": "دسمبر",
+            "monthname_short": "دêس",
+            "weekday_short": "السبت",
+            "weekday": "السبت",
+            "ampm": "PM",
+            "tz_short": "+03",
+            "tz_long": "Europe/Istanbul"
+          },
+          "period": 10,
+          "high": {
+            "fahrenheit": "60",
+            "celsius": "16"
+          },
+          "low": {
+            "fahrenheit": "44",
+            "celsius": "7"
+          },
+          "conditions": "غائم جزئياً",
+          "icon": "partlycloudy",
+          "icon_url": "http://icons.wxug.com/i/c/k/partlycloudy.gif",
+          "skyicon": "",
+          "pop": 10,
+          "qpf_allday": {
+            "in": 0.0,
+            "mm": 0
+          },
+          "qpf_day": {
+            "in": 0.0,
+            "mm": 0
+          },
+          "qpf_night": {
+            "in": 0.0,
+            "mm": 0
+          },
+          "snow_allday": {
+            "in": 0.0,
+            "cm": 0.0
+          },
+          "snow_day": {
+            "in": 0.0,
+            "cm": 0.0
+          },
+          "snow_night": {
+            "in": 0.0,
+            "cm": 0.0
+          },
+          "maxwind": {
+            "mph": 10,
+            "kph": 16,
+            "dir": "شمال",
+            "degrees": 352
+          },
+          "avewind": {
+            "mph": 7,
+            "kph": 11,
+            "dir": "شمال",
+            "degrees": 352
+          },
+          "avehumidity": 59,
+          "maxhumidity": 0,
+          "minhumidity": 0
+        }
+      ]
+    }
+  }
+}

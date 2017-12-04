@@ -1,0 +1,179 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+
+.weather-container{
+  width: auto;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+.weather-container .title{
+  font-weight: bold;
+}
+.weather-container .day{
+  width: 10%;
+  text-align: center;
+  font-size: 12px;
+  padding: 10px;
+  font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+}
+.weather-container .day:nth-child(even){
+  background: #70cbf4;
+}
+.weather-container .day:nth-child(odd) {
+  background: #70cbf4cc;
+}
+
+.weather-container .day .minMax{
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content:center; 
+}
+.weather-container .day .minMax span{
+  min-width: 50%;
+}
+
+.spilt span > button {
+    padding: 5px;
+}
+.day-night-container {
+  margin-top: 15px;
+  text-align: left;
+  font-size: 18px;
+  font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+}
+
+.day-night-container .day {
+    display: flex;
+}
+
+.day-night-container .day .icon{
+  margin-right: 10px; 
+}
+.day-night-container .title,.icon{
+  display: inline-block  
+}
+.col-md-2{padding-right: 5px; padding-left: 0;}
+
+.loading {
+    width: 32px;
+    height: 32px;
+}
+.display-inline {
+    display: inline-block;
+}
+
+.weather-year-container{
+  width: auto;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+}
+
+table.weather-year{
+  width: 100%;
+  border-spacing: 0;
+    border-collapse: collapse;
+}
+.weather-year .table-header{
+ text-decoration: underline;
+ text-align: center;
+}
+.table-text {
+  text-align: center;
+  border: none;
+  padding: 0;
+  color: rgba(0,0,0,.7);
+  width: 106px;
+}
+.table-text .average{
+  width: 36px;
+  height: 36px;
+  margin: 10px auto 10px;  
+  border: 2px solid rgba(255,255,255,.7);
+  line-height: 36px;  
+  border-radius: 36px; 
+  font-weight: bold;
+  font-size: 14px;
+}
+.table-text .minMax{
+  font-size: 12px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+.table-text .minMax span{
+  text-align: center;
+  padding: 5px;
+  display: inline-block;
+  overflow: hidden;
+  background: rgba(0, 65, 255, 0.1);
+  width: 50%;
+}
+.table-text .minMax span:last-child{
+  background: rgba(255, 255, 255, .1);
+}
+
+.t-25-21 {background-color: #ff00ff;}
+.t-20-16 {background-color: #9e00ff;}
+.t-15-11 {background-color: #0000ff;}
+.t-10-6  {background-color: #007eff;}
+.t-5-1   {background-color: #05d3f7;}
+.t04     {background-color: #05f7f7;}
+.t59     {background-color: #7fff00;}
+.t1014   {background-color: #f7f705;}
+.t1519   {background-color: #ffcc00;}
+.t2024   {background-color: #ff9900;}
+.t2529   {background-color: #ff4f00;}
+.t3034   {background-color: #cc0000;}
+.t3539   {background-color: #ba3232;}
+.t4045   {background-color: #a90303;}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+
+
+  
+
+

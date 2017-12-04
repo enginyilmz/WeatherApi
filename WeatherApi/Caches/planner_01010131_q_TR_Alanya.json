@@ -1,0 +1,132 @@
+{
+  "response": {
+    "version": "0.1",
+    "termsofService": "http://www.wunderground.com/weather/api/d/terms.html",
+    "features": {
+      "planner": 1
+    }
+  },
+  "trip": {
+    "title": "Historical Summary for - ",
+    "airport_code": "",
+    "error": "",
+    "period_of_record": {
+      "date_start": {
+        "date": {
+          "epoch": "",
+          "pretty": "",
+          "day": null,
+          "month": null,
+          "year": null,
+          "yday": null,
+          "hour": null,
+          "min": null,
+          "sec": null,
+          "isdst": "",
+          "monthname": "",
+          "monthname_short": "",
+          "weekday_short": "",
+          "weekday": "",
+          "ampm": "",
+          "tz_short": "",
+          "tz_long": ""
+        }
+      },
+      "date_end": {
+        "date": {
+          "epoch": "",
+          "pretty": "",
+          "day": null,
+          "month": null,
+          "year": null,
+          "yday": null,
+          "hour": null,
+          "min": null,
+          "sec": null,
+          "isdst": "",
+          "monthname": "",
+          "monthname_short": "",
+          "weekday_short": "",
+          "weekday": "",
+          "ampm": "",
+          "tz_short": "",
+          "tz_long": ""
+        }
+      }
+    },
+    "temp_high": {
+      "min": {
+        "F": "",
+        "C": ""
+      },
+      "avg": {
+        "F": "",
+        "C": ""
+      },
+      "max": {
+        "F": "",
+        "C": ""
+      }
+    },
+    "temp_low": {
+      "min": {
+        "F": "",
+        "C": ""
+      },
+      "avg": {
+        "F": "",
+        "C": ""
+      },
+      "max": {
+        "F": "",
+        "C": ""
+      }
+    },
+    "precip": {
+      "min": {
+        "in": "",
+        "cm": ""
+      },
+      "avg": {
+        "in": "",
+        "cm": ""
+      },
+      "max": {
+        "in": "",
+        "cm": ""
+      }
+    },
+    "dewpoint_high": {
+      "min": {
+        "F": "",
+        "C": ""
+      },
+      "avg": {
+        "F": "",
+        "C": ""
+      },
+      "max": {
+        "F": "",
+        "C": ""
+      }
+    },
+    "dewpoint_low": {
+      "min": {
+        "F": "",
+        "C": ""
+      },
+      "avg": {
+        "F": "",
+        "C": ""
+      },
+      "max": {
+        "F": "",
+        "C": ""
+      }
+    },
+    "cloud_cover": {
+      "cond": "sunny"
+    },
+    "chance_of": {}
+  }
+}

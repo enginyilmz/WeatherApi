@@ -1,0 +1,940 @@
+{
+  "response": {
+    "version": "0.1",
+    "termsofService": "http://www.wunderground.com/weather/api/d/terms.html",
+    "features": {
+      "forecast10day": 1
+    }
+  },
+  "forecast": {
+    "txt_forecast": {
+      "date": "21:28 (+03)",
+      "forecastday": [
+        {
+          "period": 0,
+          "icon": "clear",
+          "icon_url": "http://icons.wxug.com/i/c/k/clear.gif",
+          "title": "Keskiviikko",
+          "fcttext": "Enimmäkseen selkeää. Alin lämpötila 51ºF.",
+          "fcttext_metric": "Enimmäkseen selkeää. Alin lämpötila 11ºC.",
+          "pop": "0"
+        },
+        {
+          "period": 1,
+          "icon": "nt_clear",
+          "icon_url": "http://icons.wxug.com/i/c/k/nt_clear.gif",
+          "title": "Keskiviikkoyö",
+          "fcttext": "Enimmäkseen selkeää. Alin lämpötila 51ºF. Tuuli SSW, nopeus 10−20 mph.",
+          "fcttext_metric": "Enimmäkseen selkeää. Alin lämpötila 11ºC. Tuuli SSW, nopeus 15−30 km/h.",
+          "pop": "0"
+        },
+        {
+          "period": 2,
+          "icon": "clear",
+          "icon_url": "http://icons.wxug.com/i/c/k/clear.gif",
+          "title": "Torstai",
+          "fcttext": "Enimmäkseen selkeää. Muuttumassa lämpöisemmäksi. Ylin lämpötila 62ºF. Tuuli S, nopeus 10−20 mph.",
+          "fcttext_metric": "Enimmäkseen selkeää. Muuttumassa lämpöisemmäksi. Ylin lämpötila 17ºC. Tuuli S, nopeus 15−30 km/h.",
+          "pop": "0"
+        },
+        {
+          "period": 3,
+          "icon": "nt_clear",
+          "icon_url": "http://icons.wxug.com/i/c/k/nt_clear.gif",
+          "title": "Torstaiyö",
+          "fcttext": "Enimmäkseen selkeää. Alin lämpötila 56ºF. Tuuli SSW, nopeus 15−25 mph.",
+          "fcttext_metric": "Enimmäkseen selkeää. Alin lämpötila 13ºC. Tuuli SSW, nopeus 25−40 km/h.",
+          "pop": "0"
+        },
+        {
+          "period": 4,
+          "icon": "partlycloudy",
+          "icon_url": "http://icons.wxug.com/i/c/k/partlycloudy.gif",
+          "title": "Perjantai",
+          "fcttext": "Osittain pilvistä. Ylin lämpötila 65ºF. Tuuli S, nopeus 10−15 mph.",
+          "fcttext_metric": "Osittain pilvistä. Ylin lämpötila 18ºC. Tuuli S, nopeus 15−25 km/h.",
+          "pop": "0"
+        },
+        {
+          "period": 5,
+          "icon": "nt_partlycloudy",
+          "icon_url": "http://icons.wxug.com/i/c/k/nt_partlycloudy.gif",
+          "title": "Perjantaiyö",
+          "fcttext": "Osittain pilvistä. Alin lämpötila 55ºF. Tuuli SSE, nopeus 5−10 mph.",
+          "fcttext_metric": "Osittain pilvistä. Alin lämpötila 13ºC. Tuuli SSE, nopeus 10−15 km/h.",
+          "pop": "0"
+        },
+        {
+          "period": 6,
+          "icon": "partlycloudy",
+          "icon_url": "http://icons.wxug.com/i/c/k/partlycloudy.gif",
+          "title": "Lauantai",
+          "fcttext": "Osittain pilvistä. Ylin lämpötila 65ºF. Tuuli SE, nopeus 5−10 mph.",
+          "fcttext_metric": "Osittain pilvistä. Ylin lämpötila 18ºC. Tuuli SE, nopeus 10−15 km/h.",
+          "pop": "0"
+        },
+        {
+          "period": 7,
+          "icon": "nt_mostlycloudy",
+          "icon_url": "http://icons.wxug.com/i/c/k/nt_mostlycloudy.gif",
+          "title": "Lauantaiyö",
+          "fcttext": "Enimmäkseen pilvistä. Alin lämpötila 55ºF. Tuuli SSE ja vaihtelevaa.",
+          "fcttext_metric": "Enimmäkseen pilvistä. Alin lämpötila 13ºC. Tuuli SSE ja vaihtelevaa.",
+          "pop": "20"
+        },
+        {
+          "period": 8,
+          "icon": "chancerain",
+          "icon_url": "http://icons.wxug.com/i/c/k/chancerain.gif",
+          "title": "Sunnuntai",
+          "fcttext": "Aamulla heikkoa sadetta. Ylin lämpötila 65ºF. Tuuli SSE, nopeus 5−10 mph. Sateen mahd: 40%.",
+          "fcttext_metric": "Aamulla heikkoa sadetta. Ylin lämpötila 18ºC. Tuuli SSE, nopeus 10−15 km/h. Sateen mahd: 40%.",
+          "pop": "40"
+        },
+        {
+          "period": 9,
+          "icon": "nt_rain",
+          "icon_url": "http://icons.wxug.com/i/c/k/nt_rain.gif",
+          "title": "Sunnuntaiyö",
+          "fcttext": "Sadetta. Alin lämpötila 54ºF. Tuuli SW ja vaihtelevaa. Sateen mahd: 90%. Sademäärä noin 0.25 in.",
+          "fcttext_metric": "Sadetta. Alin lämpötila 12ºC. Tuuli SW ja vaihtelevaa. Sateen mahd: 90%. Sademäärä noin 6 mm.",
+          "pop": "90"
+        },
+        {
+          "period": 10,
+          "icon": "rain",
+          "icon_url": "http://icons.wxug.com/i/c/k/rain.gif",
+          "title": "Maanantai",
+          "fcttext": "Sadetta. Ylin lämpötila 58ºF. Tuuli W, nopeus 10−15 mph. Sateen mahd: 90%. Sademäärä noin 0.25 in.",
+          "fcttext_metric": "Sadetta. Ylin lämpötila 15ºC. Tuuli W, nopeus 15−25 km/h. Sateen mahd: 90%. Sademäärä noin 6 mm.",
+          "pop": "90"
+        },
+        {
+          "period": 11,
+          "icon": "nt_rain",
+          "icon_url": "http://icons.wxug.com/i/c/k/nt_rain.gif",
+          "title": "Maanantaiyö",
+          "fcttext": "Sadetta. Alin lämpötila 43ºF. Tuuli NNW, nopeus 10−20 mph. Sateen mahd: 70%. Sademäärä noin 0.25 in.",
+          "fcttext_metric": "Sadetta. Alin lämpötila 6ºC. Tuuli NNW, nopeus 15−30 km/h. Sateen mahd: 70%. Sademäärä noin 6 mm.",
+          "pop": "70"
+        },
+        {
+          "period": 12,
+          "icon": "chancerain",
+          "icon_url": "http://icons.wxug.com/i/c/k/chancerain.gif",
+          "title": "Tiistai",
+          "fcttext": "Sadekuuroja. Ylin lämpötila 48ºF. Tuuli NNW, nopeus 10−15 mph. Sateen mahd: 50%.",
+          "fcttext_metric": "Sadekuuroja. Ylin lämpötila 9ºC. Tuuli NNW, nopeus 15−25 km/h. Sateen mahd: 50%.",
+          "pop": "50"
+        },
+        {
+          "period": 13,
+          "icon": "nt_partlycloudy",
+          "icon_url": "http://icons.wxug.com/i/c/k/nt_partlycloudy.gif",
+          "title": "Tiistaiyö",
+          "fcttext": "Osittain pilvistä. Alin lämpötila 40ºF. Tuuli NNW, nopeus 5−10 mph.",
+          "fcttext_metric": "Osittain pilvistä. Alin lämpötila 4ºC. Tuuli NNW, nopeus 10−15 km/h.",
+          "pop": "20"
+        },
+        {
+          "period": 14,
+          "icon": "clear",
+          "icon_url": "http://icons.wxug.com/i/c/k/clear.gif",
+          "title": "Keskiviikko",
+          "fcttext": "Enimmäkseen selkeää. Ylin lämpötila 48ºF. Tuuli W, nopeus 5−10 mph.",
+          "fcttext_metric": "Enimmäkseen selkeää. Ylin lämpötila 9ºC. Tuuli W ja vaihtelevaa.",
+          "pop": "10"
+        },
+        {
+          "period": 15,
+          "icon": "nt_clear",
+          "icon_url": "http://icons.wxug.com/i/c/k/nt_clear.gif",
+          "title": "Keskiviikkoyö",
+          "fcttext": "Enimmäkseen selkeää. Alin lämpötila 42ºF. Tuuli WSW, nopeus 5−10 mph.",
+          "fcttext_metric": "Enimmäkseen selkeää. Alin lämpötila 6ºC. Tuuli WSW, nopeus 10−15 km/h.",
+          "pop": "0"
+        },
+        {
+          "period": 16,
+          "icon": "clear",
+          "icon_url": "http://icons.wxug.com/i/c/k/clear.gif",
+          "title": "Torstai",
+          "fcttext": "Enimmäkseen selkeää. Ylin lämpötila 52ºF. Tuuli SSW, nopeus 5−10 mph.",
+          "fcttext_metric": "Enimmäkseen selkeää. Ylin lämpötila 11ºC. Tuuli SSW, nopeus 10−15 km/h.",
+          "pop": "10"
+        },
+        {
+          "period": 17,
+          "icon": "nt_partlycloudy",
+          "icon_url": "http://icons.wxug.com/i/c/k/nt_partlycloudy.gif",
+          "title": "Torstaiyö",
+          "fcttext": "Osittain pilvistä. Alin lämpötila 44ºF. Tuuli SSW, nopeus 5−10 mph.",
+          "fcttext_metric": "Osittain pilvistä. Alin lämpötila 7ºC. Tuuli SSW, nopeus 10−15 km/h.",
+          "pop": "20"
+        },
+        {
+          "period": 18,
+          "icon": "chancerain",
+          "icon_url": "http://icons.wxug.com/i/c/k/chancerain.gif",
+          "title": "Perjantai",
+          "fcttext": "Sadekuuroja. Ylin lämpötila 51ºF. Tuuli SSW, nopeus 5−10 mph. Sateen mahd: 50%.",
+          "fcttext_metric": "Sadekuuroja. Ylin lämpötila 10ºC. Tuuli SSW, nopeus 10−15 km/h. Sateen mahd: 50%.",
+          "pop": "50"
+        },
+        {
+          "period": 19,
+          "icon": "nt_partlycloudy",
+          "icon_url": "http://icons.wxug.com/i/c/k/nt_partlycloudy.gif",
+          "title": "Perjantaiyö",
+          "fcttext": "Osittain pilvistä. Alin lämpötila 43ºF. Tuuli WSW, nopeus 5−10 mph.",
+          "fcttext_metric": "Osittain pilvistä. Alin lämpötila 6ºC. Tuuli WSW, nopeus 10−15 km/h.",
+          "pop": "20"
+        }
+      ]
+    },
+    "simpleforecast": {
+      "forecastday": [
+        {
+          "date": {
+            "epoch": "1511971200",
+            "pretty": "29. marraskuuta 2017 klo 19:00 (+03)",
+            "day": 29,
+            "month": 11,
+            "year": 2017,
+            "yday": 332,
+            "hour": 19,
+            "min": "00",
+            "sec": 0,
+            "isdst": "0",
+            "monthname": "marraskuu",
+            "monthname_short": "marras",
+            "weekday_short": "Ke",
+            "weekday": "Keskiviikko",
+            "ampm": "PM",
+            "tz_short": "+03",
+            "tz_long": "Europe/Istanbul"
+          },
+          "period": 1,
+          "high": {
+            "fahrenheit": "56",
+            "celsius": "13"
+          },
+          "low": {
+            "fahrenheit": "51",
+            "celsius": "11"
+          },
+          "conditions": "Selke&auml;&auml;",
+          "icon": "clear",
+          "icon_url": "http://icons.wxug.com/i/c/k/clear.gif",
+          "skyicon": "",
+          "pop": 0,
+          "qpf_allday": {
+            "in": 0.0,
+            "mm": 0
+          },
+          "qpf_day": {
+            "in": null,
+            "mm": null
+          },
+          "qpf_night": {
+            "in": 0.0,
+            "mm": 0
+          },
+          "snow_allday": {
+            "in": 0.0,
+            "cm": 0.0
+          },
+          "snow_day": {
+            "in": null,
+            "cm": null
+          },
+          "snow_night": {
+            "in": 0.0,
+            "cm": 0.0
+          },
+          "maxwind": {
+            "mph": 0,
+            "kph": 0,
+            "dir": "",
+            "degrees": 0
+          },
+          "avewind": {
+            "mph": 5,
+            "kph": 9,
+            "dir": "Etel&auml;",
+            "degrees": 182
+          },
+          "avehumidity": 69,
+          "maxhumidity": 0,
+          "minhumidity": 0
+        },
+        {
+          "date": {
+            "epoch": "1512057600",
+            "pretty": "30. marraskuuta 2017 klo 19:00 (+03)",
+            "day": 30,
+            "month": 11,
+            "year": 2017,
+            "yday": 333,
+            "hour": 19,
+            "min": "00",
+            "sec": 0,
+            "isdst": "0",
+            "monthname": "marraskuu",
+            "monthname_short": "marras",
+            "weekday_short": "To",
+            "weekday": "Torstai",
+            "ampm": "PM",
+            "tz_short": "+03",
+            "tz_long": "Europe/Istanbul"
+          },
+          "period": 2,
+          "high": {
+            "fahrenheit": "62",
+            "celsius": "17"
+          },
+          "low": {
+            "fahrenheit": "56",
+            "celsius": "13"
+          },
+          "conditions": "Selke&auml;&auml;",
+          "icon": "clear",
+          "icon_url": "http://icons.wxug.com/i/c/k/clear.gif",
+          "skyicon": "",
+          "pop": 0,
+          "qpf_allday": {
+            "in": 0.0,
+            "mm": 0
+          },
+          "qpf_day": {
+            "in": 0.0,
+            "mm": 0
+          },
+          "qpf_night": {
+            "in": 0.0,
+            "mm": 0
+          },
+          "snow_allday": {
+            "in": 0.0,
+            "cm": 0.0
+          },
+          "snow_day": {
+            "in": 0.0,
+            "cm": 0.0
+          },
+          "snow_night": {
+            "in": 0.0,
+            "cm": 0.0
+          },
+          "maxwind": {
+            "mph": 20,
+            "kph": 32,
+            "dir": "S",
+            "degrees": 189
+          },
+          "avewind": {
+            "mph": 16,
+            "kph": 26,
+            "dir": "S",
+            "degrees": 189
+          },
+          "avehumidity": 64,
+          "maxhumidity": 0,
+          "minhumidity": 0
+        },
+        {
+          "date": {
+            "epoch": "1512144000",
+            "pretty": "1. joulukuuta 2017 klo 19:00 (+03)",
+            "day": 1,
+            "month": 12,
+            "year": 2017,
+            "yday": 334,
+            "hour": 19,
+            "min": "00",
+            "sec": 0,
+            "isdst": "0",
+            "monthname": "joulukuu",
+            "monthname_short": "joulu ",
+            "weekday_short": "Pe",
+            "weekday": "Perjantai",
+            "ampm": "PM",
+            "tz_short": "+03",
+            "tz_long": "Europe/Istanbul"
+          },
+          "period": 3,
+          "high": {
+            "fahrenheit": "65",
+            "celsius": "18"
+          },
+          "low": {
+            "fahrenheit": "55",
+            "celsius": "13"
+          },
+          "conditions": "Puolipilvist&auml;",
+          "icon": "partlycloudy",
+          "icon_url": "http://icons.wxug.com/i/c/k/partlycloudy.gif",
+          "skyicon": "",
+          "pop": 0,
+          "qpf_allday": {
+            "in": 0.0,
+            "mm": 0
+          },
+          "qpf_day": {
+            "in": 0.0,
+            "mm": 0
+          },
+          "qpf_night": {
+            "in": 0.0,
+            "mm": 0
+          },
+          "snow_allday": {
+            "in": 0.0,
+            "cm": 0.0
+          },
+          "snow_day": {
+            "in": 0.0,
+            "cm": 0.0
+          },
+          "snow_night": {
+            "in": 0.0,
+            "cm": 0.0
+          },
+          "maxwind": {
+            "mph": 15,
+            "kph": 24,
+            "dir": "S",
+            "degrees": 174
+          },
+          "avewind": {
+            "mph": 12,
+            "kph": 19,
+            "dir": "S",
+            "degrees": 174
+          },
+          "avehumidity": 65,
+          "maxhumidity": 0,
+          "minhumidity": 0
+        },
+        {
+          "date": {
+            "epoch": "1512230400",
+            "pretty": "2. joulukuuta 2017 klo 19:00 (+03)",
+            "day": 2,
+            "month": 12,
+            "year": 2017,
+            "yday": 335,
+            "hour": 19,
+            "min": "00",
+            "sec": 0,
+            "isdst": "0",
+            "monthname": "joulukuu",
+            "monthname_short": "joulu ",
+            "weekday_short": "La",
+            "weekday": "Lauantai",
+            "ampm": "PM",
+            "tz_short": "+03",
+            "tz_long": "Europe/Istanbul"
+          },
+          "period": 4,
+          "high": {
+            "fahrenheit": "65",
+            "celsius": "18"
+          },
+          "low": {
+            "fahrenheit": "55",
+            "celsius": "13"
+          },
+          "conditions": "Puolipilvist&auml;",
+          "icon": "partlycloudy",
+          "icon_url": "http://icons.wxug.com/i/c/k/partlycloudy.gif",
+          "skyicon": "",
+          "pop": 0,
+          "qpf_allday": {
+            "in": 0.0,
+            "mm": 0
+          },
+          "qpf_day": {
+            "in": 0.0,
+            "mm": 0
+          },
+          "qpf_night": {
+            "in": 0.0,
+            "mm": 0
+          },
+          "snow_allday": {
+            "in": 0.0,
+            "cm": 0.0
+          },
+          "snow_day": {
+            "in": 0.0,
+            "cm": 0.0
+          },
+          "snow_night": {
+            "in": 0.0,
+            "cm": 0.0
+          },
+          "maxwind": {
+            "mph": 10,
+            "kph": 16,
+            "dir": "SE",
+            "degrees": 141
+          },
+          "avewind": {
+            "mph": 9,
+            "kph": 14,
+            "dir": "SE",
+            "degrees": 141
+          },
+          "avehumidity": 67,
+          "maxhumidity": 0,
+          "minhumidity": 0
+        },
+        {
+          "date": {
+            "epoch": "1512316800",
+            "pretty": "3. joulukuuta 2017 klo 19:00 (+03)",
+            "day": 3,
+            "month": 12,
+            "year": 2017,
+            "yday": 336,
+            "hour": 19,
+            "min": "00",
+            "sec": 0,
+            "isdst": "0",
+            "monthname": "joulukuu",
+            "monthname_short": "joulu ",
+            "weekday_short": "Su",
+            "weekday": "Sunnuntai",
+            "ampm": "PM",
+            "tz_short": "+03",
+            "tz_long": "Europe/Istanbul"
+          },
+          "period": 5,
+          "high": {
+            "fahrenheit": "65",
+            "celsius": "18"
+          },
+          "low": {
+            "fahrenheit": "54",
+            "celsius": "12"
+          },
+          "conditions": "Mahdollisesti sadetta",
+          "icon": "chancerain",
+          "icon_url": "http://icons.wxug.com/i/c/k/chancerain.gif",
+          "skyicon": "",
+          "pop": 40,
+          "qpf_allday": {
+            "in": 0.38,
+            "mm": 10
+          },
+          "qpf_day": {
+            "in": 0.02,
+            "mm": 1
+          },
+          "qpf_night": {
+            "in": 0.36,
+            "mm": 9
+          },
+          "snow_allday": {
+            "in": 0.0,
+            "cm": 0.0
+          },
+          "snow_day": {
+            "in": 0.0,
+            "cm": 0.0
+          },
+          "snow_night": {
+            "in": 0.0,
+            "cm": 0.0
+          },
+          "maxwind": {
+            "mph": 10,
+            "kph": 16,
+            "dir": "SSE",
+            "degrees": 153
+          },
+          "avewind": {
+            "mph": 8,
+            "kph": 13,
+            "dir": "SSE",
+            "degrees": 153
+          },
+          "avehumidity": 67,
+          "maxhumidity": 0,
+          "minhumidity": 0
+        },
+        {
+          "date": {
+            "epoch": "1512403200",
+            "pretty": "4. joulukuuta 2017 klo 19:00 (+03)",
+            "day": 4,
+            "month": 12,
+            "year": 2017,
+            "yday": 337,
+            "hour": 19,
+            "min": "00",
+            "sec": 0,
+            "isdst": "0",
+            "monthname": "joulukuu",
+            "monthname_short": "joulu ",
+            "weekday_short": "Ma",
+            "weekday": "Maanantai",
+            "ampm": "PM",
+            "tz_short": "+03",
+            "tz_long": "Europe/Istanbul"
+          },
+          "period": 6,
+          "high": {
+            "fahrenheit": "58",
+            "celsius": "14"
+          },
+          "low": {
+            "fahrenheit": "43",
+            "celsius": "6"
+          },
+          "conditions": "Sadetta",
+          "icon": "rain",
+          "icon_url": "http://icons.wxug.com/i/c/k/rain.gif",
+          "skyicon": "",
+          "pop": 90,
+          "qpf_allday": {
+            "in": 0.59,
+            "mm": 15
+          },
+          "qpf_day": {
+            "in": 0.34,
+            "mm": 9
+          },
+          "qpf_night": {
+            "in": 0.25,
+            "mm": 6
+          },
+          "snow_allday": {
+            "in": 0.0,
+            "cm": 0.0
+          },
+          "snow_day": {
+            "in": 0.0,
+            "cm": 0.0
+          },
+          "snow_night": {
+            "in": 0.0,
+            "cm": 0.0
+          },
+          "maxwind": {
+            "mph": 15,
+            "kph": 24,
+            "dir": "W",
+            "degrees": 276
+          },
+          "avewind": {
+            "mph": 12,
+            "kph": 19,
+            "dir": "W",
+            "degrees": 276
+          },
+          "avehumidity": 88,
+          "maxhumidity": 0,
+          "minhumidity": 0
+        },
+        {
+          "date": {
+            "epoch": "1512489600",
+            "pretty": "5. joulukuuta 2017 klo 19:00 (+03)",
+            "day": 5,
+            "month": 12,
+            "year": 2017,
+            "yday": 338,
+            "hour": 19,
+            "min": "00",
+            "sec": 0,
+            "isdst": "0",
+            "monthname": "joulukuu",
+            "monthname_short": "joulu ",
+            "weekday_short": "Ti",
+            "weekday": "Tiistai",
+            "ampm": "PM",
+            "tz_short": "+03",
+            "tz_long": "Europe/Istanbul"
+          },
+          "period": 7,
+          "high": {
+            "fahrenheit": "48",
+            "celsius": "9"
+          },
+          "low": {
+            "fahrenheit": "40",
+            "celsius": "4"
+          },
+          "conditions": "Mahdollisesti sadetta",
+          "icon": "chancerain",
+          "icon_url": "http://icons.wxug.com/i/c/k/chancerain.gif",
+          "skyicon": "",
+          "pop": 50,
+          "qpf_allday": {
+            "in": 0.09,
+            "mm": 2
+          },
+          "qpf_day": {
+            "in": 0.09,
+            "mm": 2
+          },
+          "qpf_night": {
+            "in": 0.0,
+            "mm": 0
+          },
+          "snow_allday": {
+            "in": 0.0,
+            "cm": 0.0
+          },
+          "snow_day": {
+            "in": 0.0,
+            "cm": 0.0
+          },
+          "snow_night": {
+            "in": 0.0,
+            "cm": 0.0
+          },
+          "maxwind": {
+            "mph": 15,
+            "kph": 24,
+            "dir": "NNW",
+            "degrees": 341
+          },
+          "avewind": {
+            "mph": 11,
+            "kph": 18,
+            "dir": "NNW",
+            "degrees": 341
+          },
+          "avehumidity": 74,
+          "maxhumidity": 0,
+          "minhumidity": 0
+        },
+        {
+          "date": {
+            "epoch": "1512576000",
+            "pretty": "6. joulukuuta 2017 klo 19:00 (+03)",
+            "day": 6,
+            "month": 12,
+            "year": 2017,
+            "yday": 339,
+            "hour": 19,
+            "min": "00",
+            "sec": 0,
+            "isdst": "0",
+            "monthname": "joulukuu",
+            "monthname_short": "joulu ",
+            "weekday_short": "Ke",
+            "weekday": "Keskiviikko",
+            "ampm": "PM",
+            "tz_short": "+03",
+            "tz_long": "Europe/Istanbul"
+          },
+          "period": 8,
+          "high": {
+            "fahrenheit": "48",
+            "celsius": "9"
+          },
+          "low": {
+            "fahrenheit": "42",
+            "celsius": "6"
+          },
+          "conditions": "Selke&auml;&auml;",
+          "icon": "clear",
+          "icon_url": "http://icons.wxug.com/i/c/k/clear.gif",
+          "skyicon": "",
+          "pop": 10,
+          "qpf_allday": {
+            "in": 0.0,
+            "mm": 0
+          },
+          "qpf_day": {
+            "in": 0.0,
+            "mm": 0
+          },
+          "qpf_night": {
+            "in": 0.0,
+            "mm": 0
+          },
+          "snow_allday": {
+            "in": 0.0,
+            "cm": 0.0
+          },
+          "snow_day": {
+            "in": 0.0,
+            "cm": 0.0
+          },
+          "snow_night": {
+            "in": 0.0,
+            "cm": 0.0
+          },
+          "maxwind": {
+            "mph": 10,
+            "kph": 16,
+            "dir": "W",
+            "degrees": 274
+          },
+          "avewind": {
+            "mph": 6,
+            "kph": 10,
+            "dir": "W",
+            "degrees": 274
+          },
+          "avehumidity": 70,
+          "maxhumidity": 0,
+          "minhumidity": 0
+        },
+        {
+          "date": {
+            "epoch": "1512662400",
+            "pretty": "7. joulukuuta 2017 klo 19:00 (+03)",
+            "day": 7,
+            "month": 12,
+            "year": 2017,
+            "yday": 340,
+            "hour": 19,
+            "min": "00",
+            "sec": 0,
+            "isdst": "0",
+            "monthname": "joulukuu",
+            "monthname_short": "joulu ",
+            "weekday_short": "To",
+            "weekday": "Torstai",
+            "ampm": "PM",
+            "tz_short": "+03",
+            "tz_long": "Europe/Istanbul"
+          },
+          "period": 9,
+          "high": {
+            "fahrenheit": "52",
+            "celsius": "11"
+          },
+          "low": {
+            "fahrenheit": "44",
+            "celsius": "7"
+          },
+          "conditions": "Selke&auml;&auml;",
+          "icon": "clear",
+          "icon_url": "http://icons.wxug.com/i/c/k/clear.gif",
+          "skyicon": "",
+          "pop": 10,
+          "qpf_allday": {
+            "in": 0.0,
+            "mm": 0
+          },
+          "qpf_day": {
+            "in": 0.0,
+            "mm": 0
+          },
+          "qpf_night": {
+            "in": 0.0,
+            "mm": 0
+          },
+          "snow_allday": {
+            "in": 0.0,
+            "cm": 0.0
+          },
+          "snow_day": {
+            "in": 0.0,
+            "cm": 0.0
+          },
+          "snow_night": {
+            "in": 0.0,
+            "cm": 0.0
+          },
+          "maxwind": {
+            "mph": 10,
+            "kph": 16,
+            "dir": "SSW",
+            "degrees": 213
+          },
+          "avewind": {
+            "mph": 7,
+            "kph": 11,
+            "dir": "SSW",
+            "degrees": 213
+          },
+          "avehumidity": 63,
+          "maxhumidity": 0,
+          "minhumidity": 0
+        },
+        {
+          "date": {
+            "epoch": "1512748800",
+            "pretty": "8. joulukuuta 2017 klo 19:00 (+03)",
+            "day": 8,
+            "month": 12,
+            "year": 2017,
+            "yday": 341,
+            "hour": 19,
+            "min": "00",
+            "sec": 0,
+            "isdst": "0",
+            "monthname": "joulukuu",
+            "monthname_short": "joulu ",
+            "weekday_short": "Pe",
+            "weekday": "Perjantai",
+            "ampm": "PM",
+            "tz_short": "+03",
+            "tz_long": "Europe/Istanbul"
+          },
+          "period": 10,
+          "high": {
+            "fahrenheit": "51",
+            "celsius": "11"
+          },
+          "low": {
+            "fahrenheit": "43",
+            "celsius": "6"
+          },
+          "conditions": "Mahdollisesti sadetta",
+          "icon": "chancerain",
+          "icon_url": "http://icons.wxug.com/i/c/k/chancerain.gif",
+          "skyicon": "",
+          "pop": 50,
+          "qpf_allday": {
+            "in": 0.17,
+            "mm": 4
+          },
+          "qpf_day": {
+            "in": 0.17,
+            "mm": 4
+          },
+          "qpf_night": {
+            "in": 0.0,
+            "mm": 0
+          },
+          "snow_allday": {
+            "in": 0.0,
+            "cm": 0.0
+          },
+          "snow_day": {
+            "in": 0.0,
+            "cm": 0.0
+          },
+          "snow_night": {
+            "in": 0.0,
+            "cm": 0.0
+          },
+          "maxwind": {
+            "mph": 10,
+            "kph": 16,
+            "dir": "SSW",
+            "degrees": 206
+          },
+          "avewind": {
+            "mph": 9,
+            "kph": 14,
+            "dir": "SSW",
+            "degrees": 206
+          },
+          "avehumidity": 71,
+          "maxhumidity": 0,
+          "minhumidity": 0
+        }
+      ]
+    }
+  }
+}

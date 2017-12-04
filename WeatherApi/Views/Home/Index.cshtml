@@ -1,0 +1,170 @@
+﻿
+@{
+    ViewBag.Title = "City";
+}
+
+<h2>City List</h2>
+<div class="container">
+    <div class="row">
+        <div ng-init="init()" ng-controller="cityCtrl" class="col-md-12">
+            <div uib-alert ng-repeat="alert in Alerts" ng-class="'alert-' + alert.type" close="closeAlert($index)" dismiss-on-timeout="5000">{{alert.msg}}</div>
+            <div class="col-md-2">
+                <input class="form-control" type="text" ng-model="searchValue" ng-keyup="val=searchValue" placeholder="Search for" required>
+            </div>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th><i>Select</i></th>
+                            <th><i>Name</i></th>
+                            <th><i>Key</i></th>
+                            <th hidden><i>ParentName</i></th>
+                            <th><i>Country Code</i></th>
+                            <th><i>Action</i></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="city in List | filter:val">
+                            <td><input class="checkbox" type="checkbox" ng-model="selected" id="selected{{$index}}"></td>
+                            <td><input class="form-control" type="text" ng-model="city.Name" placeholder="City" ng-disabled="!selected" /></td>
+                            <td><input class="form-control" type="text" ng-model="city.Key" placeholder="City" ng-disabled="!selected" /></td>
+                            <td hidden><input type="text" ng-model="city.ParentKey" placeholder="City" ng-disabled="!selected" /></td>
+                            <td><input class="form-control" type="text" ng-model="city.CountryCode" placeholder="City" ng-disabled="!selected" /></td>
+                            <td>
+                                <span title="Delete" style="cursor: pointer;" ng-if="!selected" ng-click="Delete(city,$index)"><i class="glyphicon glyphicon-minus-sign" style="font-size: 24px;"></i></span>
+                                <span title="Edit" style="cursor: pointer;" ng-click="Edit(city,selected,$index)"><i class="glyphicon glyphicon-edit" style="font-size: 24px;"></i></span>
+                                <span title="Search" style="cursor: pointer;" ng-click="Search(city)"><i class="glyphicon glyphicon-search" style="font-size: 24px;"></i></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Manually Add</th>
+                            <td><input class="form-control" ng-model="NewCityName" placeholder="City" /></td>
+                            <td><input class="form-control" ng-model="NewCityKey" placeholder="Key" /></td>
+                            <td hidden><input ng-model="NewParentName" placeholder="Parent" /></td>
+                            <td><input class="form-control" ng-model="NewCountryCode" placeholder="Country Code as 'TR'" /></td>
+                            <td><span title="Add" style="cursor: pointer;" ng-click="Add()"><i class="glyphicon glyphicon-plus-sign" style="font-size: 24px;"></i></span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+    </div>
+</div>
+
+
+<script>
+
+    var pageList = {
+        list: "@Url.Action("List", "Home")",
+        add: "@Url.Action("Add", "Home")",
+        delete: "@Url.Action("Delete", "Home")",
+        edit: "@Url.Action("Edit", "Home")",
+        search: "@Url.Action("Search", "Home")"
+    }
+    var myModule = angular.module('WeatherApp');
+    myModule.controller("cityCtrl",
+        function ($scope, $http) {
+            $scope.List = [];
+            $scope.NewCityName = "";
+            $scope.NewCityKey = "";
+            $scope.NewCountryCode = "";
+
+            //Add
+            $scope.Add = function () {
+                if ($scope.NewCityName !== "" && $scope.NewCityKey !== "") {
+                    $http.post(pageList.add,
+                    {
+                        cityName: $scope.NewCityName,
+                        cityKey: $scope.NewCityKey,
+                        countryCode: $scope.NewCountryCode
+                    }).then(function (res) {
+                        var jsonResult = res.data;
+                        if (jsonResult.IsSuccess) {
+                            $scope.List.push(jsonResult.Data);
+                            $scope.NewCityName = "";
+                            $scope.NewCityKey = "";
+                            $scope.NewCountryCode = "";
+                            $scope.addAlert('success', jsonResult.Message);
+                        } else {
+                            $scope.addAlert('danger', jsonResult.Message);
+                        }
+                    });
+                }
+            }
+            //Delete
+            $scope.Delete = function (city, i) {
+                $http.post(pageList.delete,
+                {
+                    Id: city.GuidId
+                }).then(function (res) {
+                    var jsonResult = res.data;
+                    if (jsonResult.IsSuccess) {
+                        $scope.List.splice(i, 1);
+                        $scope.addAlert('warning', city.Name + ' ' + jsonResult.Message);
+                    } else {
+                        $scope.addAlert('danger', jsonResult.Message);
+                    }
+                });
+            }
+
+            //Edit
+            $scope.Edit = function (city, selected, i) {
+                if (selected) {
+                    $http.post(pageList.edit,
+                    {
+                        data: city
+
+                    }).then(function (res) {
+                        var jsonResult = res.data;
+                        if (jsonResult.IsSuccess) {
+                            $('#selected' + i).trigger('click');
+                            $scope.addAlert('info', city.Name + ' ' + jsonResult.Message);
+                        } else {
+                            $scope.addAlert('danger', jsonResult.Message);
+                        }
+                    });
+                }
+            };
+
+            //Search
+            $scope.Search = function (city) {
+                if (city !== null) {
+                    $http.post(pageList.search,
+                    {
+                        city: city
+                    }).then(function (res) {
+                        var jsonResult = res.data;
+                        if (jsonResult.IsSuccess) {
+                            window.location.pathname = "Search/Index";
+                        } else {
+                            $scope.addAlert('danger', jsonResult.Message);
+                        }
+                    });
+                }
+            }
+
+            //Init
+            $scope.init = function () {
+                $http.get(pageList.list, {}).then(function (res) {
+                    var jsonResult = res.data;
+                    if (jsonResult.IsSuccess) {
+                        $scope.List = jsonResult.Data;
+                    } else {
+                        $scope.addAlert('danger', jsonResult.Message);
+                    }
+
+
+                });
+            }
+
+            //Alert
+            $scope.Alerts = [];
+
+            $scope.addAlert = function (type, msg) {
+                $scope.Alerts.push({ type: type, msg: msg });
+            };
+
+            $scope.closeAlert = function (index) {
+                $scope.Alerts.splice(index, 1);
+            };
+        }
+    );
+</script>

@@ -1,0 +1,332 @@
+﻿{
+  "languages": [
+    {
+      "Key": "AF",
+      "Name": "Afrikaans"
+    },
+    {
+      "Key": "AL",
+      "Name": "Albanian"
+    },
+    {
+      "Key": "AR",
+      "Name": "Arabic"
+    },
+    {
+      "Key": "HY",
+      "Name": "Armenian"
+    },
+    {
+      "Key": "AZ",
+      "Name": "Azerbaijani"
+    },
+    {
+      "Key": "EU",
+      "Name": "Basque"
+    },
+    {
+      "Key": "BY",
+      "Name": "Belarusian"
+    },
+    {
+      "Key": "BU",
+      "Name": "Bulgarian"
+    },
+    {
+      "Key": "LI",
+      "Name": "British English"
+    },
+    {
+      "Key": "MY",
+      "Name": "Burmese"
+    },
+    {
+      "Key": "CA",
+      "Name": "Catalan"
+    },
+    {
+      "Key": "CN",
+      "Name": "Chinese - Simplified"
+    },
+    {
+      "Key": "TW",
+      "Name": "Chinese - Traditional"
+    },
+    {
+      "Key": "CR",
+      "Name": "Croatian"
+    },
+    {
+      "Key": "CZ",
+      "Name": "Czech"
+    },
+    {
+      "Key": "DK",
+      "Name": "Danish"
+    },
+    {
+      "Key": "DV",
+      "Name": "Dhivehi"
+    },
+    {
+      "Key": "NL",
+      "Name": "Dutch"
+    },
+    {
+      "Key": "EN",
+      "Name": "English"
+    },
+    {
+      "Key": "EO",
+      "Name": "Esperanto"
+    },
+    {
+      "Key": "ET",
+      "Name": "Estonian"
+    },
+    {
+      "Key": "FA",
+      "Name": "Farsi"
+    },
+    {
+      "Key": "FI",
+      "Name": "Finnish"
+    },
+    {
+      "Key": "FR",
+      "Name": "French"
+    },
+    {
+      "Key": "FC",
+      "Name": "French Canadian"
+    },
+    {
+      "Key": "GZ",
+      "Name": "Galician"
+    },
+    {
+      "Key": "DL",
+      "Name": "German"
+    },
+    {
+      "Key": "KA",
+      "Name": "Georgian"
+    },
+    {
+      "Key": "GR",
+      "Name": "Greek"
+    },
+    {
+      "Key": "GU",
+      "Name": "Gujarati"
+    },
+    {
+      "Key": "HT",
+      "Name": "Haitian Creole"
+    },
+    {
+      "Key": "IL",
+      "Name": "Hebrew"
+    },
+    {
+      "Key": "HI",
+      "Name": "Hindi"
+    },
+    {
+      "Key": "HU",
+      "Name": "Hungarian"
+    },
+    {
+      "Key": "IS",
+      "Name": "Icelandic"
+    },
+    {
+      "Key": "IO",
+      "Name": "Ido"
+    },
+    {
+      "Key": "ID",
+      "Name": "Indonesian"
+    },
+    {
+      "Key": "IR",
+      "Name": "Irish Gaelic"
+    },
+    {
+      "Key": "IT",
+      "Name": "Italian"
+    },
+    {
+      "Key": "JP",
+      "Name": "Japanese"
+    },
+    {
+      "Key": "JW",
+      "Name": "Javanese"
+    },
+    {
+      "Key": "KM",
+      "Name": "Khmer"
+    },
+    {
+      "Key": "KR",
+      "Name": "Korean"
+    },
+    {
+      "Key": "KU",
+      "Name": "Kurdish"
+    },
+    {
+      "Key": "LA",
+      "Name": "Latin"
+    },
+    {
+      "Key": "LV",
+      "Name": "Latvian"
+    },
+    {
+      "Key": "LT",
+      "Name": "Lithuanian"
+    },
+    {
+      "Key": "ND",
+      "Name": "Low German"
+    },
+    {
+      "Key": "MK",
+      "Name": "Macedonian"
+    },
+    {
+      "Key": "MT",
+      "Name": "Maltese"
+    },
+    {
+      "Key": "GM",
+      "Name": "Mandinka"
+    },
+    {
+      "Key": "MI",
+      "Name": "Maori"
+    },
+    {
+      "Key": "MR",
+      "Name": "Marathi"
+    },
+    {
+      "Key": "MN",
+      "Name": "Mongolian"
+    },
+    {
+      "Key": "NO",
+      "Name": "Norwegian"
+    },
+    {
+      "Key": "OC",
+      "Name": "Occitan"
+    },
+    {
+      "Key": "PS",
+      "Name": "Pashto"
+    },
+    {
+      "Key": "GN",
+      "Name": "Plautdietsch"
+    },
+    {
+      "Key": "PL",
+      "Name": "Polish"
+    },
+    {
+      "Key": "BR",
+      "Name": "Portuguese"
+    },
+    {
+      "Key": "PA",
+      "Name": "Punjabi"
+    },
+    {
+      "Key": "RO",
+      "Name": "Romanian"
+    },
+    {
+      "Key": "RU",
+      "Name": "Russian"
+    },
+    {
+      "Key": "SR",
+      "Name": "Serbian"
+    },
+    {
+      "Key": "SK",
+      "Name": "Slovak"
+    },
+    {
+      "Key": "SL",
+      "Name": "Slovenian"
+    },
+    {
+      "Key": "SP",
+      "Name": "Spanish"
+    },
+    {
+      "Key": "SI",
+      "Name": "Swahili"
+    },
+    {
+      "Key": "SW",
+      "Name": "Swedish"
+    },
+    {
+      "Key": "CH",
+      "Name": "Swiss"
+    },
+    {
+      "Key": "TL",
+      "Name": "Tagalog"
+    },
+    {
+      "Key": "TT",
+      "Name": "Tatarish"
+    },
+    {
+      "Key": "TH",
+      "Name": "Thai"
+    },
+    {
+      "Key": "TR",
+      "Name": "Turkish"
+    },
+    {
+      "Key": "TK",
+      "Name": "Turkmen"
+    },
+    {
+      "Key": "UA",
+      "Name": "Ukrainian"
+    },
+    {
+      "Key": "UZ",
+      "Name": "Uzbek"
+    },
+    {
+      "Key": "VU",
+      "Name": "Vietnamese"
+    },
+    {
+      "Key": "CY",
+      "Name": "Welsh"
+    },
+    {
+      "Key": "SN",
+      "Name": "Wolof"
+    },
+    {
+      "Key": "JI",
+      "Name": "Yiddish - transliterated"
+    },
+    {
+      "Key": "YI",
+      "Name": "Yiddish - unicode"
+    }
+  ]
+}

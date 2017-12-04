@@ -1,0 +1,119 @@
+﻿
+@{
+    ViewBag.Title = "Cache";
+}
+
+<h2>Cache</h2>
+
+<div class="container">
+    <div class="row">
+        <div ng-init="init()" ng-controller="cacheCtrl" class="col-md-12">
+            <div uib-alert ng-repeat="alert in Alerts" ng-class="'alert-' + alert.type" close="closeAlert($index)" dismiss-on-timeout="5000">{{alert.msg}}</div>
+            <div class="col-md-2">
+                <input class="form-control" type="text" ng-model="searchValue" ng-keyup="val=searchValue" placeholder="Search for" required>
+            </div>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Select<i></i></th>
+                        <th>Name<i></i></th>
+                        <th><span class="noselect" title="Sort Date" style="cursor: pointer;" ng-click="SortDate()">Create Time<i class="glyphicon glyphicon-arrow-{{SortDirection}}"></i></span></th>
+                        <th>Action<i></i></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="cache in List | filter:val">
+                        <td><input class="checkbox" type="checkbox" ng-model="selected" id="selected{{$index}}"></td>
+                        <td>{{cache.Name}}</td>
+                        <td>{{cache.CreateDate | mydate | date: 'yyyy-MM-dd HH:mm'}}</td>
+                        <td>
+                            <span title="Delete" style="cursor: pointer;" ng-if="selected" ng-click="Delete(cache,$index)"><i class="glyphicon glyphicon-minus-sign" style="font-size: 24px;"></i></span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+<script>
+
+    var pageList = {
+        list: "@Url.Action("GetCacheList", "Cache")",
+        delete: "@Url.Action("Delete", "Cache")"
+    }
+    var myModule = angular.module('WeatherApp');
+
+    myModule.filter("mydate",
+        function () {
+            var re = /\/Date\(([0-9]*)\)\//;
+            return function (x) {
+                var m = x.match(re);
+                if (m) return new Date(parseInt(m[1]));
+                else return null;
+            };
+        });
+
+    myModule.controller("cacheCtrl",
+        function ($scope, $http) {
+            $scope.List = [];
+            $scope.SortDirection = "down";
+
+            //Init
+            $scope.init = function () {
+                $http.get(pageList.list, {}).then(function (res) {
+                    var jsonResult = res.data;
+                    if (jsonResult.IsSuccess) {
+                        $scope.List = [];
+                        $scope.List.push(...jsonResult.Data);
+                        $scope.List.sort($scope.date_sort_asc);
+                    } else {
+                        $scope.addAlert('danger', jsonResult.Message);
+                    }
+                });
+            }
+
+            //Delete
+            $scope.Delete = function (cache, i) {
+                $http.post(pageList.delete,
+                {
+                    Id: cache.GuidId
+                }).then(function (res) {
+                    var jsonResult = res.data;
+                    if (jsonResult.IsSuccess) {
+                        $scope.List.splice(i, 1);
+                        $scope.addAlert('warning', cache.Name + ' ' + jsonResult.Message);
+                    } else {
+                        $scope.addAlert('danger', jsonResult.Message);
+                    }
+                });
+            }
+
+            //SortDate
+            $scope.SortDate = function () {
+                if ($scope.SortDirection === "down") {
+                    $scope.SortDirection = "up";
+                    $scope.List.sort($scope.date_sort_desc);
+                }
+                else if ($scope.SortDirection === "up") {
+                    $scope.SortDirection = "down";
+                    $scope.List.sort($scope.date_sort_asc);
+                }
+            }
+
+            $scope.date_sort_asc = function (item1, item2) {
+                if (item1.CreateDate > item2.CreateDate) return 1;
+                if (item1.CreateDate < item2.CreateDate) return -1;
+                return 0;
+            };
+
+            $scope.date_sort_desc = function (item1, item2) {
+
+                if (item1.CreateDate > item2.CreateDate) return -1;
+                if (item1.CreateDate < item2.CreateDate) return 1;
+                return 0;
+            };
+        }
+    );
+</script>
