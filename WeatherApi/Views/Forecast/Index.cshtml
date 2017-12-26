@@ -2,6 +2,12 @@
 @{
     ViewBag.Title = "Forecast";
 }
+
+<style>
+    .lineThrough {
+        text-decoration: line-through;
+    }
+</style>
 <div ng-init="init()" ng-controller="forcastTenCtrl" class="container">
     <div class="row">
         <h3>Forecast</h3>
@@ -40,7 +46,9 @@
         <div class="panel panel-info">
             <div id="cacheDays" class="collapse">
                 <div class="panel-body">
-                    <h5 ng-if="tenDaysCacheModel.Name!==''">Cache Name : {{tenDaysCacheModel.Name}} - <strong>{{tenDaysCacheModel.CreateDate | mydate | date: 'yyyy-MM-dd HH:mm'}}</strong></h5>
+                    <h5 ng-if="tenDaysCacheModel.Name!==''" ng-class="[lineThrough]">Cache Name : {{tenDaysCacheModel.Name}} - <strong>{{tenDaysCacheModel.CreateDate | mydate | date: 'yyyy-MM-dd HH:mm'}}</strong>
+                        <span title="Delete" style="cursor: pointer;" ng-click="Delete(tenDaysCacheModel,-1)"><i class="glyphicon glyphicon-minus-sign" style="font-size: 18px;"></i></span>
+                    </h5>
                 </div>
             </div>
         </div>
@@ -79,326 +87,364 @@
             </div>
         </div>
     </div>
-                <div ng-if="yearsForecast.length>0" class="row">
-                    <h4>History (Planner) <a href="#cacheYear" class="btn btn-info" data-toggle="collapse">Cache</a></h4>
-                    <div class="panel panel-info">
-                        <div id="cacheYear" class="collapse">
-                            <div class="panel-body">
-                                <table class="table table-striped">
-                                    <tbody>
-                                        <tr>
-                                            <th>Months </th>
-                                            <th>Cache Name</th>
-                                            <th>Cache Time</th>
-                                        </tr>
-                                        <tr ng-repeat="month in yearsCacheModel">
-                                            <td>{{MonthList[$index]}}</td>
-                                            <td>{{month.Name}}</td>
-                                            <td>{{month.CreateDate | mydate | date: 'yyyy-MM-dd HH:mm'}}</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-12">
-                        <div class="weather-year-container">
-                            <table class="weather-year">
-                                <tbody>
-                                    <tr>
-                                        <th>&nbsp;</th>
-                                        <th class="table-header" ng-repeat="month in MonthList"><span title="{{month}}">{{month}}</span></th>
-                                    </tr>
-                                    <tr>
-                                        <th class="table-row"><span title="Day">Day</span></th>
-                                        <td ng-repeat="month in yearsForecast" class="table-text {{month.trip.temp_high.avg.CSSName}}">
-                                            <div title="Average" class="average">{{month.trip.temp_high.avg.C}}℃</div>
-                                            <div class="minMax">
-                                                <span title="Min">{{month.trip.temp_high.min.C}}℃</span>
-                                                <span title="Max">{{month.trip.temp_high.max.C}}℃</span>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th class="table-row"><span title="Night">Night</span></th>
-                                        <td ng-repeat="month in yearsForecast" class="table-text {{month.trip.temp_low.avg.CSSName}}">
-                                            <div class="average" title="Average">{{month.trip.temp_low.avg.C}}℃</div>
-                                            <div class="minMax">
-                                                <span title="Min">{{month.trip.temp_low.min.C}}℃</span>
-                                                <span title="Max">{{month.trip.temp_low.max.C}}℃</span>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th class="table-row"><span title="Precipitation">Precipitation cm</span></th>
-                                        <td ng-repeat="month in yearsForecast" class="table-text t04">
-                                            <div class="average" title="Average">{{month.trip.precip.avg.cm}}</div>
-                                            <div class="minMax">
-                                                <span title="Min">{{month.trip.precip.min.cm}}</span>
-                                                <span title="Max">{{month.trip.precip.max.cm}}</span>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th class="table-row"><span title="Max Dewpoint">Max Dewpoint</span></th>
-                                        <td ng-repeat="month in yearsForecast" class="table-text {{month.trip.dewpoint_high.avg.CSSName}}">
-                                            <div class="average" title="Average">{{month.trip.dewpoint_high.avg.C}}℃</div>
-                                            <div class="minMax">
-                                                <span title="Min">{{month.trip.dewpoint_high.min.C}}℃</span>
-                                                <span title="Max">{{month.trip.dewpoint_high.max.C}}℃</span>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th class="table-row"><span title="Min Dewpoint">Min Dewpoint</span></th>
-                                        <td ng-repeat="month in yearsForecast" class="table-text {{month.trip.dewpoint_low.avg.CSSName}}">
-                                            <div class="average" title="Average">{{month.trip.dewpoint_low.avg.C}}℃</div>
-                                            <div class="minMax">
-                                                <span title="Min">{{month.trip.dewpoint_low.min.C}}℃</span>
-                                                <span title="Max">{{month.trip.dewpoint_low.max.C}}℃</span>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th class="table-row"><span title="Humidity">Humidity %</span></th>
-                                        <td ng-repeat="month in yearsForecast" class="table-text t04">
-                                            <div class="average" html-title="{{month.trip.chance_of.chanceofhumidday.description}}" ng-bind-html="month.trip.chance_of.chanceofhumidday.percentage"></div>
-
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
+    <div ng-if="yearsForecast.length>0" class="row">
+        <h4>History (Planner) <a href="#cacheYear" class="btn btn-info" data-toggle="collapse">Cache</a></h4>
+        <div class="panel panel-info">
+            <div id="cacheYear" class="collapse">
+                <div class="panel-body">
+                    <table class="table table-striped">
+                        <tbody>
+                            <tr>
+                                <th>Months </th>
+                                <th>Cache Name</th>
+                                <th>Cache Time</th>
+                                <th>Action</th>
+                            </tr>
+                            <tr ng-repeat="month in yearsCacheModel">
+                                <td>{{MonthList[$index]}}</td>
+                                <td>{{month.Name}}</td>
+                                <td>{{month.CreateDate | mydate | date: 'yyyy-MM-dd HH:mm'}}</td>
+                                <td><span title="Delete" style="cursor: pointer;" ng-click="Delete(month,$index)"><i class="glyphicon glyphicon-minus-sign" style="font-size: 22px;"></i></span></td>
+</tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
-            <script>
+        </div>
+        <div class="col-md-12">
+            <div class="weather-year-container">
+                <table class="weather-year">
+                    <tbody>
+                        <tr>
+                            <th>&nbsp;</th>
+                            <th class="table-header" ng-repeat="month in MonthList"><span title="{{month}}">{{month}}</span></th>
+                        </tr>
+                        <tr>
+                            <th class="table-row"><span title="Day">Day</span></th>
+                            <td ng-repeat="month in yearsForecast" class="table-text {{month.trip.temp_high.avg.CSSName}}">
+                                <div title="Average" class="average">{{month.trip.temp_high.avg.C}}℃</div>
+                                <div class="minMax">
+                                    <span title="Min">{{month.trip.temp_high.min.C}}℃</span>
+                                    <span title="Max">{{month.trip.temp_high.max.C}}℃</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="table-row"><span title="Night">Night</span></th>
+                            <td ng-repeat="month in yearsForecast" class="table-text {{month.trip.temp_low.avg.CSSName}}">
+                                <div class="average" title="Average">{{month.trip.temp_low.avg.C}}℃</div>
+                                <div class="minMax">
+                                    <span title="Min">{{month.trip.temp_low.min.C}}℃</span>
+                                    <span title="Max">{{month.trip.temp_low.max.C}}℃</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="table-row"><span title="Precipitation">Precipitation cm</span></th>
+                            <td ng-repeat="month in yearsForecast" class="table-text t04">
+                                <div class="average" title="Average">{{month.trip.precip.avg.cm}}</div>
+                                <div class="minMax">
+                                    <span title="Min">{{month.trip.precip.min.cm}}</span>
+                                    <span title="Max">{{month.trip.precip.max.cm}}</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="table-row"><span title="Max Dewpoint">Max Dewpoint</span></th>
+                            <td ng-repeat="month in yearsForecast" class="table-text {{month.trip.dewpoint_high.avg.CSSName}}">
+                                <div class="average" title="Average">{{month.trip.dewpoint_high.avg.C}}℃</div>
+                                <div class="minMax">
+                                    <span title="Min">{{month.trip.dewpoint_high.min.C}}℃</span>
+                                    <span title="Max">{{month.trip.dewpoint_high.max.C}}℃</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="table-row"><span title="Min Dewpoint">Min Dewpoint</span></th>
+                            <td ng-repeat="month in yearsForecast" class="table-text {{month.trip.dewpoint_low.avg.CSSName}}">
+                                <div class="average" title="Average">{{month.trip.dewpoint_low.avg.C}}℃</div>
+                                <div class="minMax">
+                                    <span title="Min">{{month.trip.dewpoint_low.min.C}}℃</span>
+                                    <span title="Max">{{month.trip.dewpoint_low.max.C}}℃</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="table-row"><span title="Humidity">Humidity %</span></th>
+                            <td ng-repeat="month in yearsForecast" class="table-text t04">
+                                <div class="average" html-title="{{month.trip.chance_of.chanceofhumidday.description}}" ng-bind-html="month.trip.chance_of.chanceofhumidday.percentage"></div>
 
-                var pageList = {
-                    list: "@Url.Action("List", "Forecast")",
-                    langList: "@Url.Action("GetLangList", "Search")",
-                    getTenForecast: "@Url.Action("GetTenForecast", "Forecast")",
-                    getYearForecast: "@Url.Action("GetYearForecast", "Forecast")",
-                    iconList: "@Url.Action("GetIconList", "Forecast")",
-                    monthList: "@Url.Action("GetMonthList", "Forecast")"
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+
+    var pageList = {
+        list: "@Url.Action("List", "Forecast")",
+        langList: "@Url.Action("GetLangList", "Search")",
+        getTenForecast: "@Url.Action("GetTenForecast", "Forecast")",
+        getYearForecast: "@Url.Action("GetYearForecast", "Forecast")",
+        iconList: "@Url.Action("GetIconList", "Forecast")",
+        monthList: "@Url.Action("GetMonthList", "Forecast")",
+        delete: "@Url.Action("Delete", "Cache")"
+    }
+
+    var myModule = angular.module('WeatherApp');
+
+    myModule.filter("mydate", function () {
+        var re = /\/Date\(([0-9]*)\)\//;
+        return function (x) {
+            var m = x.match(re);
+            if (m) return new Date(parseInt(m[1]));
+            else return null;
+        };
+    });
+
+    myModule.directive('htmlTitle', function ($sanitize) {
+        return {
+            restrict: 'A',
+            link: function (scope, element, attrs) {
+                attrs.$observe('htmlTitle', function (title) {
+                    var html = angular.element('<div></div>').html($sanitize(title)).text();
+                    element.attr('title', html);
+                    element.html(html);
+                });
+            }
+        }
+    });
+
+    myModule.controller("forcastTenCtrl",
+        function ($scope, $http, $sce) {
+
+            $scope.tenDaysForecast = null;
+            $scope.yearsForecast = [];
+            $scope.LangList = { availableOptions: [], selectedOptions: null };
+            $scope.CityList = { availableOptions: [], selectedOptions: null };
+            $scope.IconList = { availableOptions: [], selectedOptions: null };
+            $scope.tenDaysCacheModel = null;
+            $scope.yearsCacheModel = [];
+            $scope.MonthList = [];
+            $scope.lineThrough = '';
+
+            //Init
+            $scope.init = function () {
+                $http.get(pageList.list, {})
+                    .then(function (res) {
+                        var jsonResult = res.data;
+                        if (jsonResult.IsSuccess) {
+                            $scope.CityList.availableOptions = [];
+                            $scope.CityList.availableOptions.push(...jsonResult.Data);
+                            if ($scope.CityList.availableOptions.length > 0)
+                                $scope.CityList.selectedOptions = $scope.CityList.availableOptions[0];
+                        } else {
+                            $scope.addAlert('danger', jsonResult.Message);
+                        }
+                    });
+                if ($scope.LangList.availableOptions.length === 0) {
+                    $http.get(pageList.langList, {})
+                        .then(function (res) {
+                            var jsonResult = res.data;
+                            if (jsonResult.IsSuccess) {
+                                //$scope.LangList.availableOptions = [];
+                                $scope.LangList.availableOptions.push(...jsonResult.Data);
+                                if ($scope.LangList.availableOptions.length > 0)
+                                    $scope.LangList.selectedOptions = $scope.LangList.availableOptions
+                                        .find(function (lang) { return lang.Key = "TR" });
+                            } else {
+                                $scope.addAlert('danger', jsonResult.Message);
+                            }
+                        });
                 }
+                if ($scope.IconList.availableOptions.length === 0) {
+                    $http.get(pageList.iconList, {})
+                        .then(function (res) {
+                            var jsonResult = res.data;
+                            if (jsonResult.IsSuccess) {
+                                //$scope.IconList.availableOptions = [];
+                                $scope.IconList.availableOptions.push(...jsonResult.Data);
+                                if ($scope.IconList.availableOptions.length > 0)
+                                    $scope.IconList.selectedOptions = $scope.IconList
+                                        .availableOptions[$scope.IconList.availableOptions.length - 1];
+                            } else {
+                                $scope.addAlert('danger', jsonResult.Message);
+                            }
+                        });
+                }
+                if ($scope.MonthList.length === 0) {
+                    $http.get(pageList.monthList, {})
+                        .then(function (res) {
+                            var jsonResult = res.data;
+                            if (jsonResult.IsSuccess) {
+                                $scope.MonthList.push(...jsonResult.Data);
+                            } else {
+                                $scope.addAlert('danger', jsonResult.Message);
+                            }
+                        });
+                }
+            };
 
-                var myModule = angular.module('WeatherApp');
+            //MonthList
 
-                myModule.filter("mydate", function () {
-                    var re = /\/Date\(([0-9]*)\)\//;
-                    return function (x) {
-                        var m = x.match(re);
-                        if (m) return new Date(parseInt(m[1]));
-                        else return null;
-                    };
-                });
-
-                myModule.directive('htmlTitle', function ($sanitize) {
-                    return {
-                        restrict: 'A',
-                        link: function (scope, element, attrs) {
-                            attrs.$observe('htmlTitle', function (title) {
-                                var html = angular.element('<div></div>').html($sanitize(title)).text();
-                                element.attr('title', html);
-                                element.html(html);
-                            });
+            //GetTenDaysForecast
+            $scope.GetTenForecast = function () {
+                $scope.loading = true;
+                $scope.IsVisible = false;
+                if ($scope.CityList.selectedOptions.Key !== "") {
+                    $http.post(pageList.getTenForecast,
+                    {
+                        key: $scope.CityList.selectedOptions.Key,
+                        lang: $scope.LangList.selectedOptions.Key
+                    }).then(function (res) {
+                        var jsonResult = res.data;
+                        if (jsonResult.IsSuccess) {
+                            $scope.tenDaysForecast = jsonResult.Data;
+                            $scope.tenDaysCacheModel = jsonResult.Cache;
+                            $scope.lineThrough = '';
+                        } else {
+                            $scope.addAlert('danger', jsonResult.Message);
                         }
-                    }
-                });
+                        $scope.loading = false;
+                    });
+                }
+            };
 
-                myModule.controller("forcastTenCtrl",
-                    function ($scope, $http, $sce) {
+            //http.get GetTenDaysForecast
+            /*
+            $scope.GetTenForecast = function () {
+                $scope.loading = true;
+                $scope.IsVisible = false;
+                if ($scope.CityList.selectedOptions.Key !== "") {
 
-                        $scope.tenDaysForecast = null;
-                        $scope.yearsForecast = [];
-                        $scope.LangList = { availableOptions: [], selectedOptions: null };
-                        $scope.CityList = { availableOptions: [], selectedOptions: null };
-                        $scope.IconList = { availableOptions: [], selectedOptions: null };
-                        $scope.tenDaysCacheModel = null;
-                        $scope.yearsCacheModel = [];
-                        $scope.MonthList = [];
-
-                        //Init
-                        $scope.init = function () {
-                            $http.get(pageList.list, {})
-                                .then(function (res) {
-                                    var jsonResult = res.data;
-                                    if (jsonResult.IsSuccess) {
-                                        $scope.CityList.availableOptions = [];
-                                        $scope.CityList.availableOptions.push(...jsonResult.Data);
-                                        if ($scope.CityList.availableOptions.length > 0)
-                                            $scope.CityList.selectedOptions = $scope.CityList.availableOptions[0];
-                                    } else {
-                                        $scope.addAlert('danger', jsonResult.Message);
-                                    }
-                                });
-                            if ($scope.LangList.availableOptions.length === 0) {
-                                $http.get(pageList.langList, {})
-                                    .then(function (res) {
-                                        var jsonResult = res.data;
-                                        if (jsonResult.IsSuccess) {
-                                            //$scope.LangList.availableOptions = [];
-                                            $scope.LangList.availableOptions.push(...jsonResult.Data);
-                                            if ($scope.LangList.availableOptions.length > 0)
-                                                $scope.LangList.selectedOptions = $scope.LangList.availableOptions
-                                                    .find(function (lang) { return lang.Key = "TR" });
-                                        } else {
-                                            $scope.addAlert('danger', jsonResult.Message);
-                                        }
-                                    });
-                            }
-                            if ($scope.IconList.availableOptions.length === 0) {
-                                $http.get(pageList.iconList, {})
-                                    .then(function (res) {
-                                        var jsonResult = res.data;
-                                        if (jsonResult.IsSuccess) {
-                                            //$scope.IconList.availableOptions = [];
-                                            $scope.IconList.availableOptions.push(...jsonResult.Data);
-                                            if ($scope.IconList.availableOptions.length > 0)
-                                                $scope.IconList.selectedOptions = $scope.IconList
-                                                    .availableOptions[$scope.IconList.availableOptions.length - 1];
-                                        } else {
-                                            $scope.addAlert('danger', jsonResult.Message);
-                                        }
-                                    });
-                            }
-                            if ($scope.MonthList.length === 0) {
-                                $http.get(pageList.monthList, {})
-                                    .then(function (res) {
-                                        var jsonResult = res.data;
-                                        if (jsonResult.IsSuccess) {
-                                            $scope.MonthList.push(...jsonResult.Data);
-                                        } else {
-                                            $scope.addAlert('danger', jsonResult.Message);
-                                        }
-                                    });
-                            }
-                        };
-
-                        //MonthList
-
-                        //GetTenDaysForecast
-                        $scope.GetTenForecast = function () {
-                            $scope.loading = true;
-                            $scope.IsVisible = false;
-                            if ($scope.CityList.selectedOptions.Key !== "") {
-                                $http.post(pageList.getTenForecast,
-                                {
-                                    key: $scope.CityList.selectedOptions.Key,
-                                    lang: $scope.LangList.selectedOptions.Key
-                                }).then(function (res) {
-                                    var jsonResult = res.data;
-                                    if (jsonResult.IsSuccess) {
-                                        $scope.tenDaysForecast = jsonResult.Data;
-                                        $scope.tenDaysCacheModel = jsonResult.Cache;
-                                    } else {
-                                        $scope.addAlert('danger', jsonResult.Message);
-                                    }
-                                    $scope.loading = false;
-                                });
-                            }
-                        };
-                        //http.get GetTenDaysForecast
-                        /*
-                        $scope.GetTenForecast = function () {
-                            $scope.loading = true;
-                            $scope.IsVisible = false;
-                            if ($scope.CityList.selectedOptions.Key !== "") {
-
-                                $http({
-                                    url: '/Forecast/GetTenForecast',
-                                    method: "GET",
-                                    params: {
-                                        key: $scope.CityList.selectedOptions.Key,
-                                        lang: $scope.LangList.selectedOptions.Key
-                                    }
-                                }).then(function (res) {
-                                    var jsonResult = res.data;
-                                    if (jsonResult.IsSuccess) {
-                                        $scope.tenDaysForecast = jsonResult.Data;
-                                    } else {
-                                        $scope.addAlert('danger', jsonResult.Message);
-                                    }
-                                    $scope.loading = false;
-                                });
-                            }
-                        };
-                        */
-
-                        //GetYearForecast
-                        $scope.GetYearForecast = function () {
-                            $scope.loading = true;
-                            if ($scope.CityList.selectedOptions.Name !== "") {
-                                $http.post(pageList.getYearForecast,
-                                {
-                                    cityName: $scope.CityList.selectedOptions.Name,
-                                    countryCode: $scope.LangList.selectedOptions.Key
-                                }).then(function (res) {
-                                    var jsonResult = res.data;
-                                    if (jsonResult.IsSuccess) {
-                                        $scope.yearsForecast = [];
-                                        $scope.yearsCacheModel = [];
-                                        $scope.yearsForecast.push(...jsonResult.Data);
-                                        $scope.yearsCacheModel.push(...jsonResult.Cache);
-                                    } else {
-                                        $scope.addAlert('danger', jsonResult.Message);
-                                    }
-                                    $scope.loading = false;
-                                });
-                            }
-                        };
-
-                        //Alert
-                        {
-                            $scope.Alerts = [];
-
-                            $scope.addAlert = function (type, msg) {
-                                $scope.Alerts.push({ type: type, msg: msg });
-                            };
-
-                            $scope.closeAlert = function (index) {
-                                $scope.Alerts.splice(index, 1);
-                            };
-
-                            $scope.ShowHide = function () {
-                                $scope.IsVisible = $scope.IsVisible ? false : true;
-                            };
+                    $http({
+                        url: '/Forecast/GetTenForecast',
+                        method: "GET",
+                        params: {
+                            key: $scope.CityList.selectedOptions.Key,
+                            lang: $scope.LangList.selectedOptions.Key
                         }
-
-                        //Detail
-                        {
-                            $scope.IsVisible = false;
-                            $scope.forecastIcon_url = "";
-                            $scope.forecastIcon = "";
-                            $scope.forecastTitle = "";
-                            $scope.forecastFcttext_metric = "";
-                            $scope.newIndex = -1;
-
-                            $scope.ShowHide = function (index, night) {
-                                if ($scope.IsVisible === false)
-                                    $scope.IsVisible = true;
-                                else if ($scope.IsVisible && $scope.newIndex === ((2 * index) + night)) {
-                                    $scope.IsVisible = false;
-                                }
-                                if ($scope.IsVisible) {
-                                    $scope.newIndex = (2 * index) + night;
-                                    $scope.forecast = $scope.tenDaysForecast.txt_forecast.forecastday[$scope.newIndex];
-                                    $scope.forecastIcon_url = $scope.forecast.icon_url;
-                                    $scope.forecastIcon = $scope.forecast.icon;
-                                    $scope.forecastTitle = $scope.forecast.title;
-                                    $scope.forecastFcttext_metric = $scope.forecast.fcttext_metric;
-                                }
-                            };
+                    }).then(function (res) {
+                        var jsonResult = res.data;
+                        if (jsonResult.IsSuccess) {
+                            $scope.tenDaysForecast = jsonResult.Data;
+                        } else {
+                            $scope.addAlert('danger', jsonResult.Message);
                         }
+                        $scope.loading = false;
+                    });
+                }
+            };
+            */
 
-                        //Clear Page
-                        $scope.ClearPage = function () {
-                            $scope.tenDaysForecast = null;
+            //GetYearForecast
+            $scope.GetYearForecast = function () {
+                $scope.loading = true;
+                if ($scope.CityList.selectedOptions.Name !== "") {
+                    $http.post(pageList.getYearForecast,
+                    {
+                        cityName: $scope.CityList.selectedOptions.Name,
+                        countryCode: $scope.LangList.selectedOptions.Key
+                    }).then(function (res) {
+                        var jsonResult = res.data;
+                        if (jsonResult.IsSuccess) {
                             $scope.yearsForecast = [];
-                            $scope.IsVisible = false;
-                        };
-                    }
-                );
+                            $scope.yearsCacheModel = [];
+                            $scope.yearsForecast.push(...jsonResult.Data);
+                            $scope.yearsCacheModel.push(...jsonResult.Cache);
+                        } else {
+                            $scope.addAlert('danger', jsonResult.Message);
+                        }
+                        $scope.loading = false;
+                    });
+                }
+            };
 
-            </script>
+            //Alert
+            {
+                $scope.Alerts = [];
+
+                $scope.addAlert = function (type, msg) {
+                    $scope.Alerts.push({ type: type, msg: msg });
+                };
+
+                $scope.closeAlert = function (index) {
+                    $scope.Alerts.splice(index, 1);
+                };
+
+                $scope.ShowHide = function () {
+                    $scope.IsVisible = $scope.IsVisible ? false : true;
+                };
+            }
+
+            //Detail
+            {
+                $scope.IsVisible = false;
+                $scope.forecastIcon_url = "";
+                $scope.forecastIcon = "";
+                $scope.forecastTitle = "";
+                $scope.forecastFcttext_metric = "";
+                $scope.newIndex = -1;
+
+                $scope.ShowHide = function (index, night) {
+                    if ($scope.IsVisible === false)
+                        $scope.IsVisible = true;
+                    else if ($scope.IsVisible && $scope.newIndex === ((2 * index) + night)) {
+                        $scope.IsVisible = false;
+                    }
+                    if ($scope.IsVisible) {
+                        $scope.newIndex = (2 * index) + night;
+                        $scope.forecast = $scope.tenDaysForecast.txt_forecast.forecastday[$scope.newIndex];
+                        $scope.forecastIcon_url = $scope.forecast.icon_url;
+                        $scope.forecastIcon = $scope.forecast.icon;
+                        $scope.forecastTitle = $scope.forecast.title;
+                        $scope.forecastFcttext_metric = $scope.forecast.fcttext_metric;
+                    }
+                };
+            }
+
+            //Clear Page
+            $scope.ClearPage = function () {
+                $scope.tenDaysForecast = null;
+                $scope.yearsForecast = [];
+                $scope.IsVisible = false;
+            };
+
+            //Delete
+            $scope.Delete = function (cache,i) {
+                $http.post(pageList.delete,
+                {
+                    Id: cache.GuidId
+                }).then(function (res) {
+                    var jsonResult = res.data;
+                    if (jsonResult.IsSuccess) {
+                        $scope.addAlert('warning', cache.Name + ' ' + jsonResult.Message);
+                        if (i >= 0) {
+                            $scope.yearsCacheModel.splice(i, 1);
+                            var newArray = $scope.yearsCacheModel;
+                            $scope.yearsCacheModel = [];
+                            $scope.yearsCacheModel.push(...newArray);
+                        } else {
+                            $scope.makeLineThrough();
+                        }
+                    } else {
+                        $scope.addAlert('danger', jsonResult.Message);
+                    }
+                });
+            }
+
+            //makeLineThrough
+            $scope.makeLineThrough = function () {
+                if ($scope.lineThrough.length == 0) {
+                    $scope.lineThrough = 'lineThrough';
+                } else {
+                    $scope.lineThrough = '';
+                }
+            };
+        }
+    );
+
+</script>

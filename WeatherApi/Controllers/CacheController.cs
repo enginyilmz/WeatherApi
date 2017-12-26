@@ -39,7 +39,7 @@ namespace WeatherApi.Controllers
                 return Json(ObjectError("No Records Found!"), AllowGet);
             }
 
-            return Json(ObjectSuccess(cache, "City is deleted."), AllowGet);
+            return Json(ObjectSuccess(cache, "Cache is deleted."), AllowGet);
         }
     }
 }
